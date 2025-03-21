@@ -7,40 +7,40 @@ function es_add_item_menu() {
     global $lang;
 
     add_menu_page(
-        $lang['globals']['titlePlugin'], // Title of the page
-        $lang['globals']['titlePlugin'], // Text to show on the menu link
+        __("ES marketing","envialosimple"), // Title of the page
+        __("ES marketing","envialosimple"), // Text to show on the menu link
         'manage_options', // Capability requirement to see the link
         'es-plugin',
         'es_plugin_page_home',
         plugin_dir_url( __FILE__ ).'assets/img/logo.svg'
     );
 
-    add_submenu_page('es-plugin', $lang['globals']['titlePlugin']." - ".$lang['menu']['welcome'], $lang['menu']['welcome'], 'manage_options','es-plugin', 'es_plugin_page_home');
-    add_submenu_page('es-plugin', $lang['globals']['titlePlugin']." - ".$lang['menu']['config'], $lang['menu']['config'], 'manage_options','es-plugin-config', 'es_plugin_page_config');
+    add_submenu_page('es-plugin', __("ES marketing","envialosimple")." - ".__("Bienvenido","envialosimple"), __("Bienvenido","envialosimple"), 'manage_options','es-plugin', 'es_plugin_page_home');
+    add_submenu_page('es-plugin', __("ES marketing","envialosimple")." - ".__("Configuración","envialosimple"), __("Configuración","envialosimple"), 'manage_options','es-plugin-config', 'es_plugin_page_config');
     
     $apiKey = get_option('es_config_apikey');
 
     if(!empty($apiKey)) {
         //campaigns
-        add_submenu_page('es-plugin', $lang['globals']['titlePlugin']." - ".$lang['menu']['campaigns'], $lang['menu']['campaigns'], 'manage_options','es-plugin-campaigns', 'es_plugin_page_campaigns');
-        add_submenu_page('es-plugin-campaigns', $lang['globals']['titlePlugin']." - ".$lang['menu']['campaigns']." - ".$lang['globals']['create'], $lang['globals']['create'], 'manage_options','es-plugin-campaigns-create', 'es_plugin_page_campaigns_create');
-        add_submenu_page('es-plugin-campaigns', $lang['globals']['titlePlugin']." - ".$lang['menu']['campaigns']." - ".$lang['globals']['edit'], $lang['globals']['edit'], 'manage_options','es-plugin-campaigns-edit', 'es_plugin_page_campaigns_edit');
+        add_submenu_page('es-plugin', __("ES marketing","envialosimple")." - ".__("Campañas","envialosimple"), __("Campañas","envialosimple"), 'manage_options','es-plugin-campaigns', 'es_plugin_page_campaigns');
+        add_submenu_page('es-plugin-campaigns', __("ES marketing","envialosimple")." - ".__("Campañas","envialosimple")." - ".__("Crear","envialosimple"), __("Crear","envialosimple"), 'manage_options','es-plugin-campaigns-create', 'es_plugin_page_campaigns_create');
+        add_submenu_page('es-plugin-campaigns', __("ES marketing","envialosimple")." - ".__("Campañas","envialosimple")." - ".__("Editar","envialosimple"), __("Editar","envialosimple"), 'manage_options','es-plugin-campaigns-edit', 'es_plugin_page_campaigns_edit');
         
         //mailLists
-        add_submenu_page('es-plugin', $lang['globals']['titlePlugin']." - ".$lang['menu']['listContacts'], $lang['menu']['listContacts'], 'manage_options','es-plugin-maillists', 'es_plugin_page_maillists');
-        add_submenu_page('es-plugin-maillists', $lang['globals']['titlePlugin']." - ".$lang['menu']['listContacts']." - ".$lang['globals']['create'], $lang['globals']['create'], 'manage_options','es-plugin-maillists-create', 'es_plugin_page_maillists_create');
-        add_submenu_page('es-plugin-maillists', $lang['globals']['titlePlugin']." - ".$lang['menu']['listContacts']." - ".$lang['globals']['edit'], $lang['globals']['edit'], 'manage_options','es-plugin-maillists-edit', 'es_plugin_page_maillists_edit');
+        add_submenu_page('es-plugin', __("ES marketing","envialosimple")." - ".__("Listas de contactos","envialosimple"), __("Listas de contactos","envialosimple"), 'manage_options','es-plugin-maillists', 'es_plugin_page_maillists');
+        add_submenu_page('es-plugin-maillists', __("ES marketing","envialosimple")." - ".__("Listas de contactos","envialosimple")." - ".__("Crear","envialosimple"), __("Crear","envialosimple"), 'manage_options','es-plugin-maillists-create', 'es_plugin_page_maillists_create');
+        add_submenu_page('es-plugin-maillists', __("ES marketing","envialosimple")." - ".__("Listas de contactos","envialosimple")." - ".__("Editar","envialosimple"), __("Editar","envialosimple"), 'manage_options','es-plugin-maillists-edit', 'es_plugin_page_maillists_edit');
         
         //contacts
-        add_submenu_page('es-plugin', $lang['globals']['titlePlugin']." - ".$lang['menu']['contacts'], $lang['menu']['contacts'], 'manage_options','es-plugin-contacts', 'es_plugin_page_contacts');
-        add_submenu_page('es-plugin-contacts', $lang['globals']['titlePlugin']." - ".$lang['menu']['contacts']." - ".$lang['globals']['create'], $lang['globals']['create'], 'manage_options','es-plugin-contacts-create', 'es_plugin_page_contacts_create');
-        add_submenu_page('es-plugin-contacts', $lang['globals']['titlePlugin']." - ".$lang['menu']['contacts']." - ".$lang['globals']['edit'], $lang['globals']['edit'], 'manage_options','es-plugin-contacts-edit', 'es_plugin_page_contacts_edit');
+        add_submenu_page('es-plugin', __("ES marketing","envialosimple")." - ".__("Contactos","envialosimple"), __("Contactos","envialosimple"), 'manage_options','es-plugin-contacts', 'es_plugin_page_contacts');
+        add_submenu_page('es-plugin-contacts', __("ES marketing","envialosimple")." - ".__("Contactos","envialosimple")." - ".__("Crear","envialosimple"), __("Crear","envialosimple"), 'manage_options','es-plugin-contacts-create', 'es_plugin_page_contacts_create');
+        add_submenu_page('es-plugin-contacts', __("ES marketing","envialosimple")." - ".__("Contactos","envialosimple")." - ".__("Editar","envialosimple"), __("Editar","envialosimple"), 'manage_options','es-plugin-contacts-edit', 'es_plugin_page_contacts_edit');
         
         //contact form 7
         if(is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
-            add_submenu_page('es-plugin', $lang['globals']['titlePlugin']." - ".$lang['menu']['contactForm7'], $lang['menu']['contactForm7'], 'manage_options','es-plugin-contactform7', 'es_plugin_page_contactform7');
-            add_submenu_page('es-plugin-contactform7', $lang['globals']['titlePlugin']." - ".$lang['menu']['contactForm7'], $lang['menu']['contactForm7']." - ".$lang['globals']['create'], 'manage_options','es-plugin-contactform7-create', 'es_plugin_page_contactform7_create');
-            add_submenu_page('es-plugin-contactform7', $lang['globals']['titlePlugin']." - ".$lang['menu']['contactForm7'], $lang['menu']['contactForm7']." - ".$lang['globals']['edit'], 'manage_options','es-plugin-contactform7-edit', 'es_plugin_page_contactform7_edit');
+            add_submenu_page('es-plugin', __("ES marketing","envialosimple")." - ".__("Vincular Formularios","envialosimple"), __("Vincular Formularios","envialosimple"), 'manage_options','es-plugin-contactform7', 'es_plugin_page_contactform7');
+            add_submenu_page('es-plugin-contactform7', __("ES marketing","envialosimple")." - ".__("Vincular Formularios","envialosimple"), __("Vincular Formularios","envialosimple")." - ".__("Crear","envialosimple"), 'manage_options','es-plugin-contactform7-create', 'es_plugin_page_contactform7_create');
+            add_submenu_page('es-plugin-contactform7', __("ES marketing","envialosimple")." - ".__("Vincular Formularios","envialosimple"), __("Vincular Formularios","envialosimple")." - ".__("Editar","envialosimple"), 'manage_options','es-plugin-contactform7-edit', 'es_plugin_page_contactform7_edit');
         }
     }
 }

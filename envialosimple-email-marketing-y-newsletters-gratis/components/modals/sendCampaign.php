@@ -270,7 +270,7 @@
                         </div>
                     </div>
                     <div class="modal-footer" v-if="!loading && !responsesend">
-                        <button type="button" v-if="this.cancel" class="btn btn-link" v-on:click="cancelAction"><?php echo esc_html($lang['globals']['cancel']); ?></button>
+                        <button type="button" v-if="this.cancel" class="btn btn-link" v-on:click="cancelAction"><?php echo esc_html(__("Cancelar","envialosimple")); ?></button>
                         <button type="button" v-if="this.accept" class="btn btn-primary" v-on:click="acceptAction">Continuar con el envío</button>
                     </div>
                     <div class="modal-footer" v-if="responsesend">

@@ -2,30 +2,30 @@
 <div class="wrap es-page">
     <div id="mailListsLists">
         <h1 class="clearfix">
-            <?php echo esc_html($lang['pages']['mailLists']['title']); ?>
-            <a href="<?php menu_page_url('es-plugin-maillists-create'); ?>" class="btn btn-primary fright"><?php echo esc_html($lang['pages']['mailLists']['create']); ?></a>
+            <?php echo esc_html(__("Lista de contactos","envialosimple")); ?>
+            <a href="<?php menu_page_url('es-plugin-maillists-create'); ?>" class="btn btn-primary fright"><?php echo esc_html(__("Crear lista","envialosimple")); ?></a>
         </h1>
         <div id="contactsLists">
             <div class="row mb20 filterBlock">
                 <div class="col textFilter">
-                    <label class="mb3"><?php echo esc_html($lang['pages']['mailLists']['filter_name']); ?></label>
+                    <label class="mb3"><?php echo esc_html(__("Filtrar por nombre:","envialosimple")); ?></label>
                     <div class="inputFilter">
                         <input type="search" v-model="filter" @change="filterData" v-on:keyup.enter="filterData" class="form-control" placeholder=""/>
                     </div>
                 </div>
                 <div class="col-auto orderFilter">
-                    <label class="mb3"><?php echo esc_html($lang['globals']['orderBy']); ?>:</label>
+                    <label class="mb3"><?php echo esc_html(__("Ordenar por","envialosimple")); ?>:</label>
                     <div class="row">
                         <div class="col pr1">
                             <select class="form-control" v-model="orderby" @change="getData">
-                                <option value="id"><?php echo esc_html($lang['globals']['id']); ?></option>
-                                <option value="name"><?php echo esc_html($lang['globals']['name']); ?></option>
+                                <option value="id"><?php echo esc_html(__("ID","envialosimple")); ?></option>
+                                <option value="name"><?php echo esc_html(__("Nombre","envialosimple")); ?></option>
                             </select>
                         </div>
                         <div class="col col-auto pl1">
                             <select class="form-control" v-model="order" @change="getData">
-                                <option value="asc"><?php echo esc_html($lang['globals']['asc']); ?></option>
-                                <option value="desc"><?php echo esc_html($lang['globals']['desc']); ?></option>
+                                <option value="asc"><?php echo esc_html(__("Asc","envialosimple")); ?></option>
+                                <option value="desc"><?php echo esc_html(__("Desc","envialosimple")); ?></option>
                             </select>
                         </div>
                     </div>
@@ -36,11 +36,11 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"><?php echo esc_html($lang['pages']['mailLists']['fields']['id']); ?></th>
-                            <th scope="col"><?php echo esc_html($lang['pages']['mailLists']['fields']['name']); ?></th>
-                            <th scope="col" class="text-center"><?php echo esc_html($lang['pages']['mailLists']['fields']['count']); ?></th>
-                            <th class="text-center" scope="col"><?php echo esc_html($lang['pages']['mailLists']['fields']['lastSend']); ?></th>
-                            <th scope="col" class="text-center w1p"><?php echo esc_html($lang['globals']['actions']); ?></th>
+                            <th scope="col"><?php echo esc_html(__("ID","envialosimple")); ?></th>
+                            <th scope="col"><?php echo esc_html(__("Nombre","envialosimple")); ?></th>
+                            <th scope="col" class="text-center"><?php echo esc_html(__("Cantidad de contactos","envialosimple")); ?></th>
+                            <th class="text-center" scope="col"><?php echo esc_html(__("Último envío","envialosimple")); ?></th>
+                            <th scope="col" class="text-center w1p"><?php echo esc_html(__("Acciones","envialosimple")); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,7 +50,7 @@
                             <td class="text-center">{{mailList.count}}</td>
                             <td class="text-center">{{getFormatDate(mailList.lastSend)}}</td>
                             <td class="text-right">
-                                <btngroup-edit-delete-component :edit="editAction" :main="mainAction" v-bind:data="mailList" title="<?php echo esc_html($lang['globals']['manage']); ?>"></btngroup-edit-delete-component>
+                                <btngroup-edit-delete-component :edit="editAction" :main="mainAction" v-bind:data="mailList" title="<?php echo esc_html(__("Gestionar","envialosimple")); ?>"></btngroup-edit-delete-component>
                             </td>
                         </tr>
                     </tbody>

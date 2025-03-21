@@ -1,33 +1,48 @@
-<?php global $lang; ?>
+<?php global $lang; 
+    $months = array(
+        1 => __('Enero', 'envialosimple'),
+        2 => __('Febrero', 'envialosimple'),
+        3 => __('Marzo', 'envialosimple'),
+        4 => __('Abril', 'envialosimple'),
+        5 => __('Mayo', 'envialosimple'),
+        6 => __('Junio', 'envialosimple'),
+        7 => __('Julio', 'envialosimple'),
+        8 => __('Agosto', 'envialosimple'),
+        9 => __('Septiembre', 'envialosimple'),
+        10 => __('Octubre', 'envialosimple'),
+        11 => __('Noviembre', 'envialosimple'),
+        12 => __('Diciembre', 'envialosimple')
+    );
+?>
 <div class="wrap es-page">
     <div id="contactsEdit">
         <div v-if="!notfound">
             <div class="btnBackBlock">
                 <a href="<?php menu_page_url('es-plugin-contacts'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> Volver al listado</a>
             </div>
-            <h1><?php echo esc_html($lang['pages']['contacts']['title_edit']); ?></h1>
+            <h1><?php echo esc_html(__("Editar contacto","envialosimple")); ?></h1>
             <form @submit.prevent="submitForm">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="p15 mb20">
-                            <h6 class="mb20"><?php echo esc_html($lang['pages']['contacts']['title_data']); ?></h6>
+                            <h6 class="mb20"><?php echo esc_html(__("Datos de contacto","envialosimple")); ?></h6>
                             <div class="form-group" v-if="contactData">
                                 <p class="mb10">
-                                    <?php echo esc_html($lang['pages']['contacts']['fields']['email']); ?>: <strong>{{contactData.email}}</strong>
+                                    <?php echo esc_html(__("Correo electrónico","envialosimple")); ?>: <strong>{{contactData.email}}</strong>
                                 </p>
                                 <p class="mb10">
-                                    <?php echo esc_html($lang['pages']['contacts']['create_date']); ?>: <strong>{{getFormatedDate(contactData.created)}}</strong>
+                                    <?php echo esc_html(__("Fecha de creación del contacto","envialosimple")); ?>: <strong>{{getFormatedDate(contactData.created)}}</strong>
                                 </p>
                                 <p>
-                                    <?php echo esc_html($lang['pages']['contacts']['list_maillists']); ?><br/>
+                                    <?php echo esc_html(__("Listas a las que está suscripto","envialosimple")); ?><br/>
                                     <strong>{{mailListsSelected}}</strong>
                                 </p>
                             </div>
                         </div>
                         <div class="mb20">
-                            <h6 class="mb20"><?php echo esc_html($lang['pages']['contacts']['title_customFields']); ?></h6>
+                            <h6 class="mb20"><?php echo esc_html(__("Campos personalizados","envialosimple")); ?></h6>
                             <div v-for="customfield in customfields" class="form-group">
-                                <label class="form-label"  :for="'customFields'+customfield.id">{{customfield.name}} <span class="optional"><?php echo esc_html($lang['pages']['contacts']['fields']['optional']); ?></span></label>
+                                <label class="form-label"  :for="'customFields'+customfield.id">{{customfield.name}} <span class="optional"><?php echo esc_html(__("(opcional)","envialosimple")); ?></span></label>
                                 <div v-if="customfield.type == 'Text field' || customfield.type == 'Hidden field'">
                                     <input  :ref="'customFieldsBlock'+customfield.id" type="text" :id="'customFieldsBlock'+customfield.id" class=" form-control"  v-model="customFieldsValues[customfield.id]" />
                                 </div>
@@ -45,23 +60,23 @@
                                 </div>
                                 <div v-if="customfield.type == 'Drop list'" >
                                     <select class="form-control mw100i" :id="'customFieldsBlock'+customfield.id" v-model="customFieldsValues[customfield.id]" :ref="'customFieldsBlock'+customfield.id">
-                                        <option value=""><?php echo esc_html($lang['pages']['contacts']['fields']['select_option']); ?></option>
+                                        <option value=""><?php echo esc_html(__("Seleccione un valor","envialosimple")); ?></option>
                                         <option v-for="(value, index) in getValuesFields(customfield)" :value="value" >{{value}}</option>
                                     </select>
                                 </div>
                                 <div v-if="customfield.type == 'Anual Date'" >
                                     <div class="row fieldDate" :id="'customFieldsBlock'+customfield.id" :ref="'customFieldsBlock'+customfield.id">
                                         <div class="col-sm-6">
-                                            <label><?php echo esc_html($lang['pages']['contacts']['fields']['month']); ?></label>
+                                            <label><?php echo esc_html(__("Mes","envialosimple")); ?></label>
                                             <select class="form-control mw100i"  v-model="customFieldsValues[customfield.id][0]" >
                                                 <option value=""></option>
-                                                <?php foreach($lang['pages']['contacts']['fields']['months'] as $key => $month): ?>
-                                                    <option value="<?php echo esc_html($key+1); ?>"><?php echo esc_html($month); ?></option>
+                                                <?php foreach($months as $num => $month): ?>
+                                                    <option value="<?php echo esc_attr($num); ?>"><?php echo esc_html($month); ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label><?php echo esc_html($lang['pages']['contacts']['fields']['day']); ?></label>
+                                            <label><?php echo esc_html(__("Día","envialosimple")); ?></label>
                                             <input class="form-control" maxlength="2" type="text" v-model="customFieldsValues[customfield.id][1]" v-on:keypress="isNumber($event)"/>
                                         </div>
                                     </div>
@@ -72,7 +87,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="mb20" v-if="contactData">
-                            <h6 class="mb20"><?php echo esc_html($lang['pages']['contacts']['title_resume']); ?></h6>
+                            <h6 class="mb20"><?php echo esc_html(__("Resumen de actividad del contacto","envialosimple")); ?></h6>
                             <ul class="listDataContact">
                                 <li><span>Aperturas totales:</span> <strong>{{contactData.reads}}</strong></li>
                                 <li><span>Clicks totales:</span> <strong>{{contactData.clicks}}</strong></li>
@@ -86,7 +101,7 @@
                     </div>
                 </div>
                 <div class="btnSubmit">
-                    <button type="submit" class="btn btn-primary"><?php echo esc_html($lang['globals']['save']); ?></button>
+                    <button type="submit" class="btn btn-primary"><?php echo esc_html(__("Guardar","envialosimple")); ?></button>
                 </div>
             </form>
         </div>

@@ -3,18 +3,18 @@
     <div id="maillistsEdit">
         <div v-if="!notfound">
             <div class="btnBackBlock">
-                <a href="<?php menu_page_url('es-plugin-maillists'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php echo esc_html($lang['globals']['back_list']); ?></a>
+                <a href="<?php menu_page_url('es-plugin-maillists'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php echo esc_html(__("Volver","envialosimple")); ?></a>
             </div>
-            <h1><?php echo esc_html($lang['pages']['maillists']['title_edit']); ?></h1>
+            <h1><?php echo esc_html(__("Editar lista de contactos","envialosimple")); ?></h1>
             <form @submit.prevent="submitForm">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="form-group mb20">
-                            <label class="form-label" for="apikey"><?php echo esc_html($lang['pages']['maillists']['fields']['name']); ?>:</label>
+                            <label class="form-label" for="apikey"><?php echo esc_html(__("Nombre","envialosimple")); ?>:</label>
                             <input name="name" ref="nameBlock" type="text" id="name" class="form-control" v-model="formData.name"  >
                         </div>
                         <div class="btnsBlock">
-                            <button type="submit" class="btn btn-primary"><?php echo esc_html($lang['globals']['save']); ?></button>
+                            <button type="submit" class="btn btn-primary"><?php echo esc_html(__("Guardar","envialosimple")); ?></button>
                         </div>
                     </div>
                 </div>

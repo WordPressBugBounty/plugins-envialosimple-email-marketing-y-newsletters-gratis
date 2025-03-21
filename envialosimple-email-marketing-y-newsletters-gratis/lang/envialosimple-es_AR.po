@@ -1,0 +1,1004 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ES marketing\n"
+"POT-Creation-Date: 2025-03-06\n"
+"PO-Revision-Date: 2025-03-06\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: globals.create
+msgid "Crear"
+msgstr "Crear"
+
+#: globals.titlePlugin
+msgid "ES marketing"
+msgstr "ES marketing"
+
+#: globals.orderBy
+msgid "Ordenar por"
+msgstr "Ordenar por"
+
+#: globals.id
+msgid "ID"
+msgstr "ID"
+
+#: globals.email
+msgid "Correo"
+msgstr "Correo"
+
+#: globals.name
+msgid "Nombre"
+msgstr "Nombre"
+
+#: globals.asc
+msgid "Asc"
+msgstr "Asc"
+
+#: globals.desc
+msgid "Desc"
+msgstr "Desc"
+
+#: globals.edit
+msgid "Editar"
+msgstr "Editar"
+
+#: globals.delete
+msgid "Eliminar"
+msgstr "Eliminar"
+
+#: globals.accept
+msgid "Aceptar"
+msgstr "Aceptar"
+
+#: globals.cancel
+msgid "Cancelar"
+msgstr "Cancelar"
+
+#: globals.actions
+msgid "Acciones"
+msgstr "Acciones"
+
+#: globals.manage
+msgid "Gestionar"
+msgstr "Gestionar"
+
+#: globals.back_list
+msgid "Volver"
+msgstr "Volver"
+
+#: globals.error_form
+msgid "Para poder continuar, por favor revisa los campos con errores."
+msgstr "Para poder continuar, por favor revisa los campos con errores."
+
+#: globals.save
+msgid "Guardar"
+msgstr "Guardar"
+
+# --- Menu ---
+
+#: menu.welcome
+msgid "Bienvenido"
+msgstr "Bienvenido"
+
+#: menu.config
+msgid "Configuración"
+msgstr "Configuración"
+
+#: menu.contacts
+msgid "Contactos"
+msgstr "Contactos"
+
+#: menu.listContacts
+msgid "Listas de contactos"
+msgstr "Listas de contactos"
+
+#: menu.campaigns
+msgid "Campañas"
+msgstr "Campañas"
+
+#: menu.contactForm7
+msgid "Vincular Formularios"
+msgstr "Vincular Formularios"
+
+# --- Pages ---
+# --- Pages > Welcome ---
+
+
+#: pages.welcome.title
+msgid "Te damos la bienvenida al plugin de EnvíaloSimple"
+msgstr "Te damos la bienvenida al plugin de EnvíaloSimple"
+
+#: pages.welcome.intro
+msgid "Integra tus herramientas y conecta rápidamente con tus clientes."
+msgstr "Integra tus herramientas y conecta rápidamente con tus clientes."
+
+#: pages.welcome.intro2
+msgid "¡Dale potencia a tu negocio!"
+msgstr "¡Dale potencia a tu negocio!"
+
+#: pages.welcome.list.0.text
+msgid "Vincula campañas y contactos con tu cuenta de EnvíaloSimple."
+msgstr "Vincula campañas y contactos con tu cuenta de EnvíaloSimple."
+
+#: pages.welcome.list.1.text
+msgid "Diseña newsletters en minutos a partir de tus posteos."
+msgstr "Diseña newsletters en minutos a partir de tus posteos."
+
+#: pages.welcome.list.2.text
+msgid "Gestiona y enriquece tus listas de contactos."
+msgstr "Gestiona y enriquece tus listas de contactos."
+
+#: pages.welcome.list.3.text
+msgid "Vincula tus formularios de Contact Form 7 con las listas de EnvíaloSimple e incrementa tu audiencia."
+msgstr "Vincula tus formularios de Contact Form 7 con las listas de EnvíaloSimple e incrementa tu audiencia."
+
+#: pages.welcome.links.1.text
+msgid "Vincular con EnvíaloSimple"
+msgstr "Vincular con EnvíaloSimple"
+
+#: pages.welcome.links.2.text
+msgid "Crear una nueva campaña"
+msgstr "Crear una nueva campaña"
+
+#: pages.welcome.create.text
+msgid "¿Aún no tienes una cuenta?"
+msgstr "¿Aún no tienes una cuenta?"
+
+
+#: pages.welcome.create.link.text
+msgid "Súmate a EnvíaloSimple"
+msgstr "Súmate a EnvíaloSimple"
+
+#: pages.welcome.create.link.url
+msgid "pages.welcome.create.link.url"
+msgstr "https://envialosimple.donweb.com/es-ar/cuenta"
+
+
+#: pages.config.title
+msgid "Configuración de la cuenta"
+msgstr "Configuración de la cuenta"
+
+#: pages.config.connected
+msgid "Conectado"
+msgstr "Conectado"
+
+#: pages.config.disconnected
+msgid "Desconectado"
+msgstr "Desconectado"
+
+#: pages.config.text_1
+msgid "El siguiente paso es conectar tu cuenta de EnvíaloSimple con WordPress."
+msgstr "El siguiente paso es conectar tu cuenta de EnvíaloSimple con WordPress."
+
+#: pages.config.text_2
+msgid "Para hacerlo, necesitas una clave API de EnvíaloSimple."
+msgstr "Para hacerlo, necesitas una clave API de EnvíaloSimple."
+
+#: pages.config.text_3
+msgid "Obtener clave API."
+msgstr "Obtener clave API."
+
+#: pages.config.input_placeholder
+msgid "Copia y pega aquí tu clave API"
+msgstr "Copia y pega aquí tu clave API"
+
+#: pages.config.error_key
+msgid "La clave ingresada es incorrecta. Por favor, verifique el valor ingresado y que la clave esté Activa."
+msgstr "La clave ingresada es incorrecta. Por favor, verifique el valor ingresado y que la clave esté Activa."
+
+#: pages.config.profile.title
+msgid "Datos de tu cuenta de EnvíaloSimple"
+msgstr "Datos de tu cuenta de EnvíaloSimple"
+
+#: pages.config.profile.username
+msgid "Usuario"
+msgstr "Usuario"
+
+#: pages.config.profile.id
+msgid "ID de la cuenta"
+msgstr "ID de la cuenta"
+
+#: pages.config.profile.type
+msgid "Tipo de cuenta"
+msgstr "Tipo de cuenta"
+
+
+#: pages.config.types.Prepaid
+msgid "Prepaga"
+msgstr "Prepaga"
+
+#: pages.config.types.Monthly
+msgid "Mensual"
+msgstr "Mensual"
+
+#: pages.config.types.default
+msgid "Free"
+msgstr "Free"
+
+
+
+#: pages.contacts.title
+msgid "Contactos"
+msgstr "Contactos"
+
+#: pages.contacts.title_customFields
+msgid "Campos personalizados"
+msgstr "Campos personalizados"
+
+#: pages.contacts.title_create
+msgid "Crear contacto"
+msgstr "Crear contacto"
+
+#: pages.contacts.title_edit
+msgid "Editar contacto"
+msgstr "Editar contacto"
+
+#: pages.contacts.title_data
+msgid "Datos de contacto"
+msgstr "Datos de contacto"
+
+#: pages.contacts.title_select_maillist
+msgid "Lista para suscribir al contacto"
+msgstr "Lista para suscribir al contacto"
+
+#: pages.contacts.title_resume
+msgid "Resumen de actividad del contacto"
+msgstr "Resumen de actividad del contacto"
+
+#: pages.contacts.filter_email
+msgid "Filtrar por correo:"
+msgstr "Filtrar por correo:"
+
+#: pages.contacts.filter_maillist
+msgid "pages.contacts.filter_maillist"
+msgstr "Filtrado por lista:"
+
+#: pages.contacts.create_date
+msgid "Fecha de creación del contacto"
+msgstr "Fecha de creación del contacto"
+
+#: pages.contacts.list_maillists
+msgid "Listas a las que está suscripto"
+msgstr "Listas a las que está suscripto"
+
+#: pages.contacts.fields_list.id
+msgid "pages.contacts.fields_list.id"
+msgstr "ID"
+
+#: pages.contacts.fields_list.email
+msgid "pages.contacts.fields_list.email"
+msgstr "Correo"
+
+#: pages.contacts.fields_list.created
+msgid "Fecha creación"
+msgstr "Fecha creación"
+
+#: pages.contacts.fields_list.subscriptions
+msgid "Cantidad de listas"
+msgstr "Cantidad de listas"
+
+#: pages.contacts.fields_list.actions
+msgid "pages.contacts.fields_list.actions"
+msgstr "Acciones"
+
+#: pages.contacts.fields.optional
+msgid "pages.contacts.fields.optional"
+msgstr "(opcional)"
+
+#: pages.contacts.fields.month
+msgid "Mes"
+msgstr "Mes"
+
+#: pages.contacts.fields.day
+msgid "Día"
+msgstr "Día"
+
+#: pages.contacts.fields.select_option
+msgid "Seleccione un valor"
+msgstr "Seleccione un valor"
+
+#: pages.contacts.fields.email
+msgid "Correo electrónico"
+msgstr "Correo electrónico"
+
+
+#: pages.contacts.fields.months.0
+msgid "Enero"
+msgstr "Enero"
+
+#: pages.contacts.fields.months.1
+msgid "Febrero"
+msgstr "Febrero"
+
+#: pages.contacts.fields.months.2
+msgid "Marzo"
+msgstr "Marzo"
+
+#: pages.contacts.fields.months.3
+msgid "Abril"
+msgstr "Abril"
+
+#: pages.contacts.fields.months.4
+msgid "Mayo"
+msgstr "Mayo"
+
+#: pages.contacts.fields.months.5
+msgid "Junio"
+msgstr "Junio"
+
+#: pages.contacts.fields.months.6
+msgid "Julio"
+msgstr "Julio"
+
+#: pages.contacts.fields.months.7
+msgid "Agosto"
+msgstr "Agosto"
+
+#: pages.contacts.fields.months.8
+msgid "Septiembre"
+msgstr "Septiembre"
+
+#: pages.contacts.fields.months.9
+msgid "Octubre"
+msgstr "Octubre"
+
+#: pages.contacts.fields.months.10
+msgid "Noviembre"
+msgstr "Noviembre"
+
+#: pages.contacts.fields.months.11
+msgid "Diciembre"
+msgstr "Diciembre"
+
+
+
+#: pages.mailLists.title
+msgid "Lista de contactos"
+msgstr "Lista de contactos"
+
+#: pages.mailLists.create
+msgid "Crear lista"
+msgstr "Crear lista"
+
+
+
+#: pages.mailLists.fields.name
+msgid "pages.mailLists.fields.name"
+msgstr "Nombre"
+
+#: pages.mailLists.fields.count
+msgid "Cantidad de contactos"
+msgstr "Cantidad de contactos"
+
+#: pages.mailLists.fields.lastSend
+msgid "Último envío"
+msgstr "Último envío"
+
+#: pages.mailLists.filter_name
+msgid "Filtrar por nombre:"
+msgstr "Filtrar por nombre:"
+
+#: pages.campaigns.title
+msgid "Campañas"
+msgstr "Campañas"
+
+
+#: pages.campaigns.fields.created
+msgid "Fecha creación"
+msgstr "Fecha creación"
+
+#: pages.campaigns.fields.status
+msgid "Estado"
+msgstr "Estado"
+
+#: pages.campaigns.fields.send_date
+msgid "Fecha de envío"
+msgstr "Fecha de envío"
+
+#: pages.campaigns.fields.actions
+msgid "pages.campaigns.fields.actions"
+msgstr "Acciones"
+
+#: pages.campaigns.create
+msgid "Crear campaña"
+msgstr "Crear campaña"
+
+#: pages.campaigns.filter_name
+msgid "Filtrar por nombre:"
+msgstr "Filtrar por nombre:"
+
+#: pages.campaigns.filter_maillist
+msgid "Filtro por Lista de contactos:"
+msgstr "Filtro por Lista de contactos:"
+
+#: pages.campaigns.filter_createDateFrom
+msgid "Fecha de creación desde"
+msgstr "Fecha de creación desde"
+
+#: pages.campaigns.filter_createDateTo
+msgid "Fecha de creación hasta"
+msgstr "Fecha de creación hasta"
+
+
+#: pages.campaign_create_edit.title_edit
+msgid "Editar campaña"
+msgstr "Editar campaña"
+
+#: pages.campaign_create_edit.fields.name
+msgid "Nombre de la campaña"
+msgstr "Nombre de la campaña"
+
+#: pages.campaign_create_edit.fields.name_sub
+msgid "Este nombre no es visible para los destinatarios"
+msgstr "Este nombre no es visible para los destinatarios"
+
+#: pages.campaign_create_edit.fields.subject
+msgid "Asunto"
+msgstr "Asunto"
+
+#: pages.campaign_create_edit.fields.text_preview
+msgid "Texto de vista previa"
+msgstr "Texto de vista previa"
+
+#: pages.campaign_create_edit.fields.sub_text_preview
+msgid "Este fragmento de texto aparecerá en la bandeja de entrada luego del asunto del correo."
+msgstr "Este fragmento de texto aparecerá en la bandeja de entrada luego del asunto del correo."
+
+#: pages.campaign_create_edit.fields.from_alias
+msgid "Nombre del remitente"
+msgstr "Nombre del remitente"
+
+#: pages.campaign_create_edit.fields.from_email
+msgid "Desde"
+msgstr "Desde"
+
+#: pages.campaign_create_edit.fields.reply_email
+msgid "Responder a"
+msgstr "Responder a"
+
+#: pages.campaign_create_edit.fields.maillists
+msgid "Listas"
+msgstr "Listas"
+
+#: pages.campaign_create_edit.fields.segment
+msgid "Segmento"
+msgstr "Segmento"
+
+#: pages.campaign_create_edit.placeholder_example_email
+msgid "Ej: nombre@dominio.com"
+msgstr "Ej: nombre@dominio.com"
+
+#: pages.campaign_create_edit.title_general
+msgid "Configuración general"
+msgstr "Configuración general"
+
+
+#: pages.campaign_create_edit.title_remitter
+msgid "Datos del remitente"
+msgstr "Datos del remitente"
+
+#: pages.campaign_create_edit.title_maillist
+msgid "Destinatarios"
+msgstr "Destinatarios"
+
+#: pages.campaign_create_edit.title_content
+msgid "Contenido"
+msgstr "Contenido"
+
+#: pages.campaign_create_edit.advances_options.title
+msgid "Opciones avanzadas"
+msgstr "Opciones avanzadas"
+
+#: pages.campaign_create_edit.advances_options.options.0.title
+msgid "Seguir enlaces"
+msgstr "Seguir enlaces"
+
+#: pages.campaign_create_edit.advances_options.options.0.text
+msgid "Conoce cuáles fueron los enlaces de tu campaña que más clics recibieron y quiénes los hicieron."
+msgstr "Conoce cuáles fueron los enlaces de tu campaña que más clics recibieron y quiénes los hicieron."
+
+#: pages.campaign_create_edit.advances_options.options.1.title
+msgid "Contar aperturas"
+msgstr "Contar aperturas"
+
+#: pages.campaign_create_edit.advances_options.options.1.text
+msgid "Descubre desde cuáles dispositivos se abrió tu campaña. La ubicación, los días y los horarios de esas aperturas."
+msgstr "Descubre desde cuáles dispositivos se abrió tu campaña. La ubicación, los días y los horarios de esas aperturas."
+
+#: pages.campaign_create_edit.advances_options.options.2.title
+msgid "Vincular con Google Analytics"
+msgstr "Vincular con Google Analytics"
+
+#: pages.campaign_create_edit.advances_options.options.2.text
+msgid "Analiza el impacto de tu campaña en tu sitio web."
+msgstr "Analiza el impacto de tu campaña en tu sitio web."
+
+#: pages.campaign_create_edit.advances_options.options.3.title
+msgid "Enviar informe"
+msgstr "Enviar informe"
+
+#: pages.campaign_create_edit.advances_options.options.3.text
+msgid "Recibe en tu correo un reporte completo al finalizar tu campaña."
+msgstr "Recibe en tu correo un reporte completo al finalizar tu campaña."
+
+#: pages.campaign_create_edit.advances_options.options.4.title
+msgid "Agregar al archivo público"
+msgstr "Agregar al archivo público"
+
+#: pages.campaign_create_edit.advances_options.options.4.text
+msgid "Suma tu campaña al archivo público para que pueda ser indexada por los motores de búsqueda, como Google."
+msgstr "Suma tu campaña al archivo público para que pueda ser indexada por los motores de búsqueda, como Google."
+
+#: pages.campaign_create_edit.content_text
+msgid "Crea un correo profesional que se adapta a dispositivos móviles utilizando el editor gráfico. También puedes elegir el modo programador del editor para realizar tu contenido."
+msgstr "Crea un correo profesional que se adapta a dispositivos móviles utilizando el editor gráfico. También puedes elegir el modo programador del editor para realizar tu contenido."
+
+#: pages.campaign_create_edit.content_btn
+msgid "Crear contenido"
+msgstr "Crear contenido"
+
+#: pages.maillists.title_create
+msgid "Crear lista de contactos"
+msgstr "Crear lista de contactos"
+
+#: pages.maillists.title_edit
+msgid "Editar lista de contactos"
+msgstr "Editar lista de contactos"
+
+#: pages.maillists.fields.name
+msgid "pages.maillists.fields.name"
+msgstr "Nombre"
+
+#: pages.contactForm7.title
+msgid "Vinculación de formularios"
+msgstr "Vinculación de formularios"
+
+#: pages.contactForm7.subtitle
+msgid "Tienes configurados algunos formularios Contact Form 7 en tu blog y puedes aprovecharlos para enriquecer tus listas de contactos de EnvíaloSimple. <br/>En caso de presentarse un error en la vinculación de los campos personalizados, se enviará un correo electrónico con los valores que intentó registrar el contacto. El correo electrónico del contacto siempre se registrará."
+msgstr "Tienes configurados algunos formularios Contact Form 7 en tu blog y puedes aprovecharlos para enriquecer tus listas de contactos de EnvíaloSimple. <br/>En caso de presentarse un error en la vinculación de los campos personalizados, se enviará un correo electrónico con los valores que intentó registrar el contacto. El correo electrónico del contacto siempre se registrará."
+
+#: pages.contactForm7.subtitle2
+msgid "<b>Correo de confirmación de suscripción</b>. Le enviaremos uno a cada contacto que complete este formulario. Este mail asegura que tus campañas sean recibidas por las personas correctas y te protege de suscripciones indeseadas. Te invitamos a leer los beneficios del mismo"
+msgstr "<b>Correo de confirmación de suscripción</b>. Le enviaremos uno a cada contacto que complete este formulario. Este mail asegura que tus campañas sean recibidas por las personas correctas y te protege de suscripciones indeseadas. Te invitamos a leer los beneficios del mismo"
+
+#: pages.contactForm7.subtitle3
+msgid "Recuerda que <b>debes contar</b> con el servicio de SMTP de WordPress o con algún plugin especifico para que se realicen los envíos. En <b>EnvíaloSimple</b> disponemos con un plugin que te ayudará a que consigas contactos deseados. Puedes explorar más detalles haciendo clic en "
+msgstr "Recuerda que <b>debes contar</b> con el servicio de SMTP de WordPress o con algún plugin especifico para que se realicen los envíos. En <b>EnvíaloSimple</b> disponemos con un plugin que te ayudará a que consigas contactos deseados. Puedes explorar más detalles haciendo clic en "
+
+#: pages.contactForm7.subtitle2_link
+msgid "https://faqs.envialosimple.com/contactos-y-listas/formularios"
+msgstr "https://faqs.envialosimple.com/contactos-y-listas/formularios"
+
+#: pages.contactForm7.subtitle2_link_text
+msgid "aquí."
+msgstr "aquí."
+
+#: pages.contactForm7.subtitle3_link
+msgid "https://es-ar.wordpress.org/plugins/envialosimple-transaccional/"
+msgstr "https://es-ar.wordpress.org/plugins/envialosimple-transaccional/"
+
+#: pages.contactForm7.subtitle3_link_text
+msgid "ver."
+msgstr "ver."
+
+#: pages.contactForm7.title_edit
+msgid "Editar formulario de contacto"
+msgstr "Editar formulario de contacto"
+
+#: pages.contactForm7.title_create
+msgid "Vincular formulario de contacto"
+msgstr "Vincular formulario de contacto"
+
+#: pages.contactForm7.filter_name
+msgid "Filtrar por nombre:"
+msgstr "Filtrar por nombre:"
+
+#: pages.contactForm7.fields_list.id
+msgid "pages.contactForm7.fields_list.id"
+msgstr "ID"
+
+#: pages.contactForm7.fields_list.contactForm7
+msgid "Formulario Contact Form 7"
+msgstr "Formulario Contact Form 7"
+
+#: pages.contactForm7.fields_list.formES
+msgid "Lista EnvíaloSimple"
+msgstr "Lista EnvíaloSimple"
+
+#: pages.contactForm7.fields_list.action
+msgid "pages.contactForm7.fields_list.action"
+msgstr "Acciones"
+
+#: pages.contactForm7.labels.contactform7
+msgid "Selecciona el formulario del que quieres tomar datos"
+msgstr "Selecciona el formulario del que quieres tomar datos"
+
+#: pages.contactForm7.labels.maillist
+msgid "Selecciona la lista a la que suscribirás a los contactos"
+msgstr "Selecciona la lista a la que suscribirás a los contactos"
+
+#: pages.contactForm7.labels.fields_contactForm
+msgid "Campo formulario Contact Form 7"
+msgstr "Campo formulario Contact Form 7"
+
+#: pages.contactForm7.labels.fields_customField
+msgid "Campo Personalizado EnvíaloSimple"
+msgstr "Campo Personalizado EnvíaloSimple"
+
+#: pages.contactForm7.title_fields
+msgid "pages.contactForm7.title_fields"
+msgstr "Ahora por favor selecciona que datos deseas sincronizar con EnvíaloSimple"
+
+#: pages.contactForm7.required_email
+msgid "pages.contactForm7.required_email"
+msgstr "Es necesario asociar el campo \"Email\" de \"Campo Personalizado EnvíaloSimple\" con algún campo de Contact Form 7 para poder continuar"
+
+#: pages.contactForm7.save_ok
+msgid "La vinculación fue exitosa."
+msgstr "La vinculación fue exitosa."
+
+#: pages.contactForm7.btns.create
+msgid "Vincular formularios"
+msgstr "Vincular formularios"
+
+#: components.singlelist.maillists_options
+msgid "Listas disponibles"
+msgstr "Listas disponibles"
+
+#: components.singlelist.maillists_selected
+msgid "Lista seleccionada"
+msgstr "Lista seleccionada"
+
+#: components.singlelist.required_maillist
+msgid "Es obligatorio seleccionar una lista."
+msgstr "Es obligatorio seleccionar una lista."
+
+#: errorsGlobals.is_not_accepted
+msgid "errorsGlobals.is_not_accepted"
+msgstr "El campo debe ser aceptado."
+
+#: errorsGlobals.invalid_url
+msgid "errorsGlobals.invalid_url"
+msgstr "El campo no es una URL válida."
+
+#: errorsGlobals.invalid_date
+msgid "errorsGlobals.invalid_date"
+msgstr "La fecha ingresada es incorrecta."
+
+#: errorsGlobals.invalid_alpha_format
+msgid "errorsGlobals.invalid_alpha_format"
+msgstr "El campo sólo debe contener letras."
+
+#: errorsGlobals.invalid_alpha_dash_format
+msgid "errorsGlobals.invalid_alpha_dash_format"
+msgstr "El campo sólo debe contener letras, números, guiones y guiones bajos."
+
+#: errorsGlobals.invalid_alpha_num_format
+msgid "errorsGlobals.invalid_alpha_num_format"
+msgstr "El campo sólo debe contener letras y números."
+
+#: errorsGlobals.invalid_array_format
+msgid "errorsGlobals.invalid_array_format"
+msgstr "El campo debe ser un array."
+
+#: errorsGlobals.attached
+msgid "errorsGlobals.attached"
+msgstr "Este campo ya se adjuntó."
+
+#: errorsGlobals.before_date
+msgid "errorsGlobals.before_date"
+msgstr "El campo debe ser una fecha anterior."
+
+#: errorsGlobals.before_or_equal_date
+msgid "errorsGlobals.before_or_equal_date"
+msgstr "El campo debe ser una fecha anterior o igual."
+
+#: errorsGlobals.invalid_between_elements
+msgid "errorsGlobals.invalid_between_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+#: errorsGlobals.invalid_between_size_file
+msgid "errorsGlobals.invalid_between_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+#: errorsGlobals.invalid_between_number
+msgid "errorsGlobals.invalid_between_number"
+msgstr "El valor ingresado es incorrecto."
+
+#: errorsGlobals.invalid_between_characters
+msgid "errorsGlobals.invalid_between_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+#: errorsGlobals.invalid_boolean
+msgid "errorsGlobals.invalid_boolean"
+msgstr "El campo debe tener un valor verdadero o falso."
+
+#: errorsGlobals.invalid_value_confirmed
+msgid "errorsGlobals.invalid_value_confirmed"
+msgstr "La confirmación no coincide."
+
+#: errorsGlobals.invalid_date_format
+msgid "errorsGlobals.invalid_date_format"
+msgstr "Ingrese una fecha válida."
+
+#: errorsGlobals.invalid_date_equal
+msgid "errorsGlobals.invalid_date_equal"
+msgstr "La fecha ingresada es incorrecta."
+
+#: errorsGlobals.invalid_value_different
+msgid "errorsGlobals.invalid_value_different"
+msgstr "El campo debe ser diferente."
+
+#: errorsGlobals.invalid_value_digits
+msgid "errorsGlobals.invalid_value_digits"
+msgstr "La cantidad de digitos es incorrecto."
+
+#: errorsGlobals.invalid_value_digits_between
+msgid "errorsGlobals.invalid_value_digits_between"
+msgstr "La cantidad de digitos es incorrecto."
+
+#: errorsGlobals.invalid_image_dimensions
+msgid "errorsGlobals.invalid_image_dimensions"
+msgstr "Las dimensiones de la imagen no son válidas."
+
+#: errorsGlobals.value_duplicate
+msgid "errorsGlobals.value_duplicate"
+msgstr "El campo contiene un valor duplicado."
+
+#: errorsGlobals.invalid_email_format
+msgid "errorsGlobals.invalid_email_format"
+msgstr "El formato del email es incorrecto."
+
+#: errorsGlobals.invalid_velue_ends_with
+msgid "errorsGlobals.invalid_velue_ends_with"
+msgstr "El valor ingresado es incorrecto."
+
+#: errorsGlobals.not_exists
+msgid "errorsGlobals.not_exists"
+msgstr "El campo es inválido."
+
+#: errorsGlobals.is_not_file
+msgid "errorsGlobals.is_not_file"
+msgstr "El campo debe ser un archivo."
+
+#: errorsGlobals.not_empty
+msgid "errorsGlobals.not_empty"
+msgstr "El campo es obligatorio."
+
+#: errorsGlobals.invalid_gt_elements
+msgid "errorsGlobals.invalid_gt_elements"
+msgstr "La cantidad de elementos es incorrecta."
+
+#: errorsGlobals.invalid_gt_size_file
+msgid "errorsGlobals.invalid_gt_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+#: errorsGlobals.invalid_gt_numeric
+msgid "errorsGlobals.invalid_gt_numeric"
+msgstr "El valor ingresado es incorrecto."
+
+#: errorsGlobals.invalid_gt_characters
+msgid "errorsGlobals.invalid_gt_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+#: errorsGlobals.invalid_gte_elements
+msgid "errorsGlobals.invalid_gte_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+#: errorsGlobals.invalid_gte_size_file
+msgid "errorsGlobals.invalid_gte_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+#: errorsGlobals.invalid_gte_numeric
+msgid "errorsGlobals.invalid_gte_numeric"
+msgstr "El valor ingresado es incorrecto."
+
+#: errorsGlobals.invalid_gte_characters
+msgid "errorsGlobals.invalid_gte_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+msgid "errorsGlobals.invalid_image"
+msgstr "El campo debe ser una imagen."
+
+msgid "errorsGlobals.invalid_value_in"
+msgstr "El valor ingresado es inválido."
+
+msgid "errorsGlobals.invalid_value_in_array"
+msgstr "El valor ingresado es inválido."
+
+msgid "errorsGlobals.invalid_value_integer"
+msgstr "El campo debe ser un número entero."
+
+msgid "errorsGlobals.invalid_value_ip"
+msgstr "El campo debe ser una dirección IP válida."
+
+msgid "errorsGlobals.invalid_ipv4_format"
+msgstr "El campo debe ser una dirección IPv4 válida."
+
+msgid "errorsGlobals.invalid_ipv6_format"
+msgstr "El campo debe ser una dirección IPv6 válida."
+
+msgid "errorsGlobals.invalid_json_format"
+msgstr "El campo debe ser una cadena JSON válida."
+
+msgid "errorsGlobals.invalid_lt_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+msgid "errorsGlobals.invalid_lt_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_lt_numeric"
+msgstr "El valor ingresado es incorrecto."
+
+msgid "errorsGlobals.invalid_lt_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+msgid "errorsGlobals.invalid_lte_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+msgid "errorsGlobals.invalid_lte_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_lte_numeric"
+msgstr "El valor ingresado es incorrecto."
+
+msgid "errorsGlobals.invalid_lte_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+msgid "errorsGlobals.invalid_max_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+msgid "errorsGlobals.invalid_max_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_max_numeric"
+msgstr "El valor ingresado supera el valor maximo permitido."
+
+msgid "errorsGlobals.invalid_max_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+msgid "errorsGlobals.invalid_mimes"
+msgstr "El formato del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_mimetypes"
+msgstr "El formato del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_min_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+msgid "errorsGlobals.invalid_min_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_min_numeric"
+msgstr "El valor ingresado es incorrecto."
+
+msgid "errorsGlobals.invalid_min_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+msgid "errorsGlobals.multiple_of"
+msgstr "El valor ingresado es incorrecto"
+
+msgid "errorsGlobals.invalid_format"
+msgstr "El campo posee un valor incorrecto."
+
+msgid "errorsGlobals.only_numeric"
+msgstr "El campo debe ser numérico."
+
+msgid "errorsGlobals.invalid_password"
+msgstr "La contraseña es incorrecta."
+
+msgid "errorsGlobals.is_not_present"
+msgstr "El campo debe estar presente."
+
+msgid "errorsGlobals.prohibited"
+msgstr "El campo está prohibido."
+
+msgid "errorsGlobals.prohibited_if"
+msgstr "El campo está prohibido."
+
+msgid "errorsGlobals.prohibited_unless"
+msgstr "El campo está prohibido."
+
+msgid "errorsGlobals.relatable"
+msgstr "El campo no se puede asociar con este recurso"
+
+msgid "errorsGlobals.required"
+msgstr "El campo es obligatorio."
+
+msgid "errorsGlobals.is_not_same_that"
+msgstr "El campo deben coincidir."
+
+msgid "errorsGlobals.invalid_count_elements"
+msgstr "La cantidad de elementos es incorrecto."
+
+msgid "errorsGlobals.invalid_size_file"
+msgstr "El tamaño del archivo es incorrecto."
+
+msgid "errorsGlobals.invalid_size_number"
+msgstr "El valor ingresado es incorrecto."
+
+msgid "errorsGlobals.invalid_count_characters"
+msgstr "La cantidad de caracteres es incorrecto."
+
+msgid "errorsGlobals.invalid_value"
+msgstr "El valor posee caracteres no permitidos."
+
+msgid "errorsGlobals.only_characters"
+msgstr "El campo debe ser una cadena de caracteres."
+
+msgid "errorsGlobals.invalid_timezone"
+msgstr "El campo debe ser una zona válida."
+
+msgid "errorsGlobals.is_used"
+msgstr "Ya existe un registro con ese nombre."
+
+msgid "errorsGlobals.error_upload_file"
+msgstr "Error al subir el archivo."
+
+msgid "errorsGlobals.invalid_url_format"
+msgstr "El formato tipo url del campo es inválido."
+
+msgid "errorsGlobals.invalid_uuid_format"
+msgstr "El campo debe ser un UUID válido."
+
+msgid "errorsGlobals.errorMsg_mailListNotFound"
+msgstr "No se encontró lista con el ID informado."
+
+msgid "errorsGlobals.errorMsg_contactListNotFound"
+msgstr "No existe lista con el ID informado."
+
+msgid "errorsGlobals.errorMsg_contactAlreadyExist"
+msgstr "Ya existe un contacto con el mismo correo."
+
+msgid "errorsGlobals.errorMsg_senderDomainNotVerified"
+msgstr "El dominio debe estar verificado."
+
+msgid "errorsGlobals.generic_error"
+msgstr "Ha ocurrido un error al procesar la información. Por favor, vuelva a intentar más tarde."
+
+msgid "errorsGlobals.generic_request_error"
+msgstr "Ha ocurrido un error al procesar la información. Por favor, vuelva a intentar más tarde."
+
+msgid "errorsGlobals.generic_title_error_fields"
+msgstr "Error con los siguentes campos:"
+
+msgid "errorsGlobals.contacts_delete_ok"
+msgstr "El contacto se eliminó con éxito."
+
+msgid "errorsGlobals.contacts_modal_confirm_delete"
+msgstr "Está seguro que desea eliminar el contacto:"
+
+msgid "errorsGlobals.forms_modal_confirm_delete"
+msgstr "Está seguro que desea eliminar la vinculación con el formulario:"
+
+msgid "errorsGlobals.mailList_delete_ok"
+msgstr "La lista se eliminó con éxito."
+
+msgid "errorsGlobals.mailList_modal_confirm_delete"
+msgstr "Está seguro que desea eliminar la lista:"
+
+msgid "errorsGlobals.campaigns_delete_ok"
+msgstr "La campaña se eliminó con éxito."
+
+msgid "errorsGlobals.campaigns_modal_confirm_delete"
+msgstr "Está seguro que desea eliminar la campaña:"
+
+msgid "errorsGlobals.errorMsg_campaignIntegrityFail-subject"
+msgstr "El campo es obligatorio."
+
+msgid "errorsGlobals.errorMsg_campaignIntegrityFail-replyTo"
+msgstr "El campo es obligatorio."
+
+msgid "errorsGlobals.errorMsg_campaignIntegrityFail-fromToName"
+msgstr "El campo es obligatorio."
+
+msgid "errorsGlobals.errorMsg_campaignIntegrityFail-fromTo"
+msgstr "El campo es obligatorio."
+
+msgid "errorsGlobals.errorMsg_campaignIntegrityFail-content"
+msgstr "Debes crear contenido para tu campaña."

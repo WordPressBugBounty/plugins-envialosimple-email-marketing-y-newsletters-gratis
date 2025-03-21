@@ -177,8 +177,8 @@
                     </div>
                     <div id="traitsBlock"></div>
                     <div class="modal-footer" v-if="!showConfirmCancel">
-                        <button type="button" class="btn btn-primary" v-on:click="save(getContent())"><?php echo esc_html($lang['globals']['accept']); ?></button>
-                        <button type="button" class="btn" v-on:click="showConfirmCancelModal()"><?php echo esc_html($lang['globals']['cancel']); ?></button>
+                        <button type="button" class="btn btn-primary" v-on:click="save(getContent())"><?php echo esc_html(__("Aceptar","envialosimple")); ?></button>
+                        <button type="button" class="btn" v-on:click="showConfirmCancelModal()"><?php echo esc_html(__("Cancelar","envialosimple")); ?></button>
                     </div>
                 </div>
             </div>

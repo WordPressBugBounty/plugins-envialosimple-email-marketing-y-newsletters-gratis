@@ -24,8 +24,8 @@
                         {{text}}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" v-if="this.accept" class="btn btn-sm btn-primary" v-on:click="acceptAction"><?php echo esc_html($lang['globals']['accept']); ?></button>
-                        <button type="button" v-if="this.cancel" class="btn btn-sm" v-on:click="cancelAction"><?php echo esc_html($lang['globals']['cancel']); ?></button>
+                        <button type="button" v-if="this.accept" class="btn btn-sm btn-primary" v-on:click="acceptAction"><?php echo esc_html(__("Aceptar","envialosimple")); ?></button>
+                        <button type="button" v-if="this.cancel" class="btn btn-sm" v-on:click="cancelAction"><?php echo esc_html(__("Cancelar","envialosimple")); ?></button>
                     </div>
                 </div>
             </div>

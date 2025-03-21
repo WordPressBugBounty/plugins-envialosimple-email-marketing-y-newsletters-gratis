@@ -4,70 +4,70 @@
         
         <div v-if="!notfound">
             <div class="btnBackBlock">
-                <a href="<?php menu_page_url('es-plugin-campaigns'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php echo esc_html($lang['globals']['back_list']); ?></a>
+                <a href="<?php menu_page_url('es-plugin-campaigns'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php echo esc_html(__("Volver","envialosimple")); ?></a>
             </div>
-            <h1><?php echo esc_html($lang['pages']['campaign_create_edit']['title_edit']); ?></h1>
+            <h1><?php echo esc_html(__("Editar campaña","envialosimple")); ?></h1>
             <form @submit.prevent='submitForm'>
                 <div class="alert alert-dismissible alert-warning" v-if="form.workspace == 'designer' && showDesigner">
                     <button type="button" class="btn-close" v-on:click="hideAlertDesigner()"></button>
                     <p class="mb-0">Ten presente que en caso de guardar algún cambio sobre la campaña, el contenido de la misma se transformará a Modo Programador y no podrá editarse desde el Editor visual de la herramienta.</p>
                 </div>
                 <div class="form-group mb30">
-                    <label class="form-label" ><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['name']); ?></label>
+                    <label class="form-label" ><?php echo esc_html(__("Nombre de la campaña","envialosimple")); ?></label>
                     <input name="name" type="text" ref="nameBlock" class=" form-control" v-model="form.name" />
-                    <label><small class="text-muted"><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['name_sub']); ?></small></label>
+                    <label><small class="text-muted"><?php echo esc_html(__("Este nombre no es visible para los destinatarios","envialosimple")); ?></small></label>
                 </div>
                 <div class="row columnsBlock">
                     <div class="col-md-6">
                         <div class="mb20">
-                            <h6><?php echo esc_html($lang['pages']['campaign_create_edit']['title_general']); ?></h6>
+                            <h6><?php echo esc_html(__("Configuración general","envialosimple")); ?></h6>
                             <div class="form-group">
-                                <label class="form-label" ><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['subject']); ?></label>
+                                <label class="form-label" ><?php echo esc_html(__("Asunto","envialosimple")); ?></label>
                                 <input  type="text" ref="subjectBlock" v-model="form.subject" class=" form-control"  />
                             </div>
                             <div class="form-group">
-                                <label class="form-label" ><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['text_preview']); ?></label>
+                                <label class="form-label" ><?php echo esc_html(__("Texto de vista previa","envialosimple")); ?></label>
                                 <input  type="text" ref="previewTextBlock" v-model="form.previewText" class=" form-control"  />
                                 <label>
-                                    <small class="text-muted"><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['sub_text_preview']); ?></small>
+                                    <small class="text-muted"><?php echo esc_html(__("Este fragmento de texto aparecerá en la bandeja de entrada luego del asunto del correo.","envialosimple")); ?></small>
                                 </label>
                             </div>
                         </div>
                         
                         <div class="mb20">
-                            <h6><?php echo esc_html($lang['pages']['campaign_create_edit']['title_from']); ?></h6>
+                            <h6><?php echo esc_html(__("Datos del remitente","envialosimple")); ?></h6>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="form-label" ><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['from_alias']); ?></label>
+                                        <label class="form-label" ><?php echo esc_html(__("Nombre del remitente","envialosimple")); ?></label>
                                         <input  type="text" ref="fromAliasBlock" v-model="form.fromAlias" name="fromAlias" class=" form-control"  />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group ">
-                                        <label class="form-label" ><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['from_email']); ?></label>
-                                        <input  type="text" ref="fromEmailBlock" v-model="form.fromEmail" name="fromEmail" placeholder="<?php echo esc_html($lang['pages']['campaign_create_edit']['placeholder_example_email']); ?>"  class=" form-control"  />
+                                        <label class="form-label" ><?php echo esc_html(__("Desde","envialosimple")); ?></label>
+                                        <input  type="text" ref="fromEmailBlock" v-model="form.fromEmail" name="fromEmail" placeholder="<?php echo esc_html(__("Ej: nombre@dominio.com","envialosimple")); ?>"  class=" form-control"  />
                                     </div>
                                 </div>
                             </div>
                             
                             
                             <div class="form-group">
-                                <label class="form-label" ><?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['reply_email']); ?></label>
-                                <input type="text" ref="replyEmailBlock" v-model="form.replyEmail" name="replyEmail" placeholder="<?php echo esc_html($lang['pages']['campaign_create_edit']['placeholder_example_email']); ?>"  class=" form-control"  />
+                                <label class="form-label" ><?php echo esc_html(__("Responder a","envialosimple")); ?></label>
+                                <input type="text" ref="replyEmailBlock" v-model="form.replyEmail" name="replyEmail" placeholder="<?php echo esc_html(__("Ej: nombre@dominio.com","envialosimple")); ?>"  class=" form-control"  />
                             </div>
                         </div>
 
                         <div class="mb20">
-                            <h6><?php echo esc_html($lang['pages']['campaign_create_edit']['title_maillist']) ?></h6>
+                            <h6><?php echo esc_html(__("Destinatarios","envialosimple")) ?></h6>
                             <div class="mb10">
                                 <label class="mb10 ">
                                     <input type="radio" @change="changeTypeList" v-model="type_list" value="maillist" name="type_list" />
-                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['maillists']); ?>
+                                    <?php echo esc_html(__("Listas","envialosimple")); ?>
                                 </label>
                                 <label class="mb10 ml15">
                                     <input type="radio" @change="changeTypeList" v-model="type_list" value="segment" name="type_list" />
-                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['fields']['segment']); ?>
+                                    <?php echo esc_html(__("Segmento","envialosimple")); ?>
                                 </label>
                             </div>
                             <div class="form-group ">
@@ -104,7 +104,7 @@
                                 <input class="d-none" type="checkbox" id="openColapse1" name="openColapse1" />
                                 <h2 class="accordion-header" id="headingOne">
                                     <label for="openColapse1" class="accordion-button" type="button" >
-                                        <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['title']); ?>
+                                        <?php echo esc_html(__("Opciones avanzadas","envialosimple")); ?>
                                     </label>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -115,10 +115,10 @@
                                             </div>
                                             <div class="col pl0">
                                                 <div class="label">
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][0]['title']); ?>
+                                                    <?php echo esc_html(__("Seguir enlaces","envialosimple")); ?>
                                                 </div>
                                                 <p>
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][0]['text']); ?>
+                                                    <?php echo esc_html(__("Conoce cuáles fueron los enlaces de tu campaña que más clics recibieron y quiénes los hicieron.","envialosimple")); ?>
                                                 </p>
                                             </div>
                                         </div>
@@ -128,10 +128,10 @@
                                             </div>
                                             <div class="col pl0">
                                                 <div class="label">
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][1]['title']); ?>
+                                                    <?php echo esc_html(__("Contar aperturas","envialosimple")); ?>
                                                 </div>
                                                 <p>
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][1]['text']); ?>
+                                                    <?php echo esc_html(__("Descubre desde cuáles dispositivos se abrió tu campaña. La ubicación, los días y los horarios de esas aperturas.","envialosimple")); ?>
                                                 </p>
                                             </div>
                                         </div>
@@ -141,10 +141,10 @@
                                             </div>
                                             <div class="col pl0">
                                                 <div class="label">
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][2]['title']); ?>
+                                                    <?php echo esc_html(__("Vincular con Google Analytics","envialosimple")); ?>
                                                 </div>
                                                 <p>
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][2]['text']); ?>
+                                                    <?php echo esc_html(__("Analiza el impacto de tu campaña en tu sitio web.","envialosimple")); ?>
                                                 </p>
                                             </div>
                                         </div>
@@ -154,10 +154,10 @@
                                             </div>
                                             <div class="col pl0">
                                                 <div class="label">
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][3]['title']); ?>
+                                                    <?php echo esc_html(__("Enviar informe","envialosimple")); ?>
                                                 </div>
                                                 <p>
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][3]['text']); ?>
+                                                    <?php echo esc_html(__("Recibe en tu correo un reporte completo al finalizar tu campaña.","envialosimple")); ?>
                                                 </p>
                                             </div>
                                         </div>
@@ -167,10 +167,10 @@
                                             </div>
                                             <div class="col pl0">
                                                 <div class="label">
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][4]['title']); ?>
+                                                    <?php echo esc_html(__("Agregar al archivo público","envialosimple")); ?>
                                                 </div>
                                                 <p>
-                                                    <?php echo esc_html($lang['pages']['campaign_create_edit']['advances_options']['options'][4]['text']); ?>
+                                                    <?php echo esc_html(__("Suma tu campaña al archivo público para que pueda ser indexada por los motores de búsqueda, como Google.","envialosimple")); ?>
                                                 </p>
                                             </div>
                                         </div>
@@ -181,17 +181,17 @@
                     </div>
                     <div class="col-md-6 rightBlock">
                         <div class="emptyContent" v-if="!form.content">
-                            <h6><?php echo esc_html($lang['pages']['campaign_create_edit']['title_content']); ?></h6>
-                            <p><?php echo esc_html($lang['pages']['campaign_create_edit']['content_text']); ?></p>
+                            <h6><?php echo esc_html(__("Contenido","envialosimple")); ?></h6>
+                            <p><?php echo esc_html(__("Crea un correo profesional que se adapta a dispositivos móviles utilizando el editor gráfico. También puedes elegir el modo programador del editor para realizar tu contenido.","envialosimple")); ?></p>
                             <p class="btnBlock">
                                 <div class="btnContent">
-                                    <span class="btn btn-primary" ref="contentBlock" v-on:click="showModalContent()"><?php echo esc_html($lang['pages']['campaign_create_edit']['content_btn']); ?></span>
+                                    <span class="btn btn-primary" ref="contentBlock" v-on:click="showModalContent()"><?php echo esc_html(__("Crear contenido","envialosimple")); ?></span>
                                 </div>
                             </p>
                         </div>
                         <div class="contentBlock" v-bind:class="{ 'd-none': !form.content}">
                             <div class="topBlock">
-                                <h6><?php echo esc_html($lang['pages']['campaign_create_edit']['title_content']); ?></h6>
+                                <h6><?php echo esc_html(__("Contenido","envialosimple")); ?></h6>
                                 <div class="mb20">
                                     <div class="contentActionsBlock" >
                                         <span class="delete" v-on:click="showRemoveContent">

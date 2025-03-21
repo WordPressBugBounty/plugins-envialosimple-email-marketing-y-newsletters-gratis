@@ -7,38 +7,38 @@
                     <img class="logo" src="<?php echo ES_PLUGIN_URL_BASE.'/assets/img/logo.png'; ?>" />
                 </div>
                 <p class="titlePage">
-                    <?php echo esc_html($lang['pages']['welcome']['title']); ?> 
+                    <?php echo esc_html(__("Te damos la bienvenida al plugin de EnvíaloSimple","envialosimple")); ?> 
                 </p>
-                <p class="titlePage"><?php echo esc_html($lang['pages']['welcome']['intro']); ?><br/><?php echo esc_html($lang['pages']['welcome']['intro2']); ?></p>
+                <p class="titlePage"><?php echo esc_html(__("Integra tus herramientas y conecta rápidamente con tus clientes.","envialosimple")); ?><br/><?php echo esc_html(__("¡Dale potencia a tu negocio!","envialosimple")); ?></p>
                 <ul class="listCharacters">
                     <li>
-                        <?php echo esc_html($lang['pages']['welcome']['list'][0]['text']); ?>
+                        <?php echo __("Vincula campañas y contactos con tu cuenta de EnvíaloSimple.","envialosimple"); ?>
                     </li>
                     <li>
-                        <?php echo esc_html($lang['pages']['welcome']['list'][1]['text']); ?>
+                        <?php echo esc_html(__("Diseña newsletters en minutos a partir de tus posteos.","envialosimple")); ?>
                     </li>
                     <li>
-                        <?php echo esc_html($lang['pages']['welcome']['list'][2]['text']); ?>
+                        <?php echo esc_html(__("Gestiona y enriquece tus listas de contactos.","envialosimple")); ?>
                     </li>
                     <li>
-                        <?php echo esc_html($lang['pages']['welcome']['list'][3]['text']); ?>
+                        <?php echo esc_html(__("Vincula tus formularios de Contact Form 7 con las listas de EnvíaloSimple e incrementa tu audiencia.","envialosimple")); ?>
                     </li>
                 </ul>
                 <p class="btnBlock1">
                     <?php if(empty($dataProfile)):?>
-                        <a  href="<?php echo esc_html($lang['pages']['welcome']['links']['1']['url']); ?>" class="btn btn-primary btn-lg mb10">
-                            <?php echo esc_html($lang['pages']['welcome']['links']['1']['text']); ?>
+                        <a  href="<?php echo esc_html(get_site_url().'/wp-admin/admin.php?page=es-plugin-config'); ?>" class="btn btn-primary btn-lg mb10">
+                            <?php echo esc_html(__("Vincular con EnvíaloSimple","envialosimple")); ?>
                         </a>
                     <?php else: ?>
-                        <a href="<?php echo esc_html($lang['pages']['welcome']['links']['2']['url']); ?>" class="btn btn-primary btn-lg mb10">
-                            <?php echo esc_html($lang['pages']['welcome']['links']['2']['text']); ?>
+                        <a href="<?php echo esc_html(get_site_url().'/wp-admin/admin.php?page=es-plugin-campaigns-create'); ?>" class="btn btn-primary btn-lg mb10">
+                            <?php echo esc_html(__("Crear una nueva campaña","envialosimple")); ?>
                         </a>
                     <?php endif; ?>
                 </p>
                 <p class="btnBlock2">
-                    <?php echo esc_html($lang['pages']['welcome']['create']['text']); ?>
-                    <a target="_blank" href="<?php echo esc_html($lang['pages']['welcome']['create']['link']['url']); ?>">
-                        <?php echo esc_html($lang['pages']['welcome']['create']['link']['text']); ?>
+                    <?php echo esc_html(__("¿Aún no tienes una cuenta?","envialosimple")); ?>
+                    <a target="_blank" href="<?php echo esc_html('https://envialosimple.donweb.com/es-ar/cuenta'); ?>">
+                        <?php echo esc_html(__("Súmate a EnvíaloSimple","envialosimple")); ?>
                     </a>
                 </p>
             </div>

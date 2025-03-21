@@ -2,47 +2,47 @@
 <div class="wrap es-page">
     <div id="campaignsLists">
         <h1 class="clearfix">
-            <?php echo esc_html($lang['pages']['campaigns']['title']); ?>
-            <a href="<?php menu_page_url('es-plugin-campaigns-create'); ?>" class="btn btn-primary fright"><?php echo esc_html($lang['pages']['campaigns']['create']); ?></a>
+            <?php echo esc_html(__("Campañas","envialosimple")); ?>
+            <a href="<?php menu_page_url('es-plugin-campaigns-create'); ?>" class="btn btn-primary fright"><?php echo esc_html(__("Crear campaña","envialosimple")); ?></a>
         </h1>
         <div >
             <!-- filter -->
             <div class="row mb10 filterBlock">
                 <div class="col-12 mb10 col-md textFilter">
-                    <label class="mb3"><?php echo esc_html($lang['pages']['campaigns']['filter_name']); ?></label>
+                    <label class="mb3"><?php echo esc_html(__("Filtrar por nombre:","envialosimple")); ?></label>
                     <div class="inputFilter">
                         <input type="search" v-model="filterName" @change="filterData" v-on:keyup.enter="filterData" class="form-control" placeholder=""/>
                     </div>
                     
                 </div>
                 <div class="datePickerBlock mb10 col-auto">
-                    <label class="mb3"><?php echo esc_html($lang['pages']['campaigns']['filter_createDateFrom']); ?></label>
+                    <label class="mb3"><?php echo esc_html(__("Fecha de creación desde","envialosimple")); ?></label>
                     <vuejs-datepicker placeholder="Desde" clear-button="true" clear-button-icon="fa fa-times" @cleared="filterData" @closed="filterData" format="dd/MM/yyyy" :language="lang_datepicker" input-class="form-control dateInput" v-model="createDateFromDate"></vuejs-datepicker>
                 </div>
                 <div class="datePickerBlock mb10 col-auto">
-                    <label class="mb3"><?php echo esc_html($lang['pages']['campaigns']['filter_createDateTo']); ?></label>
+                    <label class="mb3"><?php echo esc_html(__("Fecha de creación hasta","envialosimple")); ?></label>
                     <vuejs-datepicker placeholder="Hasta" clear-button="true" clear-button-icon="fa fa-times" @cleared="filterData" @closed="filterData" format="dd/MM/yyyy" :language="lang_datepicker" input-class="form-control dateInput" v-model="createDateToDate"></vuejs-datepicker>
                 </div>
                 <div class="col-12 mb10 col-md-auto statusFilter">
-                    <label class="mb3"><?php echo esc_html($lang['pages']['campaigns']['filter_status']); ?></label>
+                    <label class="mb3"><?php echo esc_html(__("Estado","envialosimple")); ?></label>
                     <select v-model="filterStatus" @change="filterData" class="form-control">
                         <option></option>
                         <option v-for="(option, key) in status_options" v-bind:value="key">{{option}}</option>
                     </select>
                 </div>
                 <div class="col-xs-12 mb10 col-sm-auto orderFilter">
-                    <label class="mb3"><?php echo esc_html($lang['globals']['orderBy']); ?>:</label>
+                    <label class="mb3"><?php echo esc_html(__("Ordenar por","envialosimple")); ?>:</label>
                     <div class="row">
                         <div class="col pr1">
                             <select class="form-control" v-model="orderby" @change="getData">
-                                <option value="id"><?php echo esc_html($lang['globals']['id']); ?></option>
-                                <option value="name"><?php echo esc_html($lang['globals']['name']); ?></option>
+                                <option value="id"><?php echo esc_html(__("ID","envialosimple")); ?></option>
+                                <option value="name"><?php echo esc_html(__("Nombre","envialosimple")); ?></option>
                             </select>
                         </div>
                         <div class="col col-auto pl1">
                             <select class="form-control" v-model="order" @change="getData">
-                                <option value="asc"><?php echo esc_html($lang['globals']['asc']); ?></option>
-                                <option value="desc"><?php echo esc_html($lang['globals']['desc']); ?></option>
+                                <option value="asc"><?php echo esc_html(__("Asc","envialosimple")); ?></option>
+                                <option value="desc"><?php echo esc_html(__("Desc","envialosimple")); ?></option>
                             </select>
                         </div>
                     </div>
@@ -53,12 +53,12 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"><?php echo esc_html($lang['pages']['campaigns']['fields']['id']); ?></th>
-                            <th scope="col"><?php echo esc_html($lang['pages']['campaigns']['fields']['name']); ?></th>
-                            <th scope="col" class="text-center"><?php echo esc_html($lang['pages']['campaigns']['fields']['created']); ?></th>
-                            <th scope="col" class="text-center"><?php echo esc_html($lang['pages']['campaigns']['fields']['send_date']); ?></th>
-                            <th class="text-center" scope="col"><?php echo esc_html($lang['pages']['campaigns']['fields']['status']); ?></th>
-                            <th scope="col" class="text-center w1p"><?php echo esc_html($lang['globals']['actions']); ?></th>
+                            <th scope="col"><?php echo esc_html(__("ID","envialosimple")); ?></th>
+                            <th scope="col"><?php echo esc_html(__("Nombre","envialosimple")); ?></th>
+                            <th scope="col" class="text-center"><?php echo esc_html(__("Fecha creación","envialosimple")); ?></th>
+                            <th scope="col" class="text-center"><?php echo esc_html(__("Fecha de envío","envialosimple")); ?></th>
+                            <th class="text-center" scope="col"><?php echo esc_html(__("Estado","envialosimple")); ?></th>
+                            <th scope="col" class="text-center w1p"><?php echo esc_html(__("Acciones","envialosimple")); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,7 +69,7 @@
                             <td class="text-center">{{getSendDate(campaign)}}</td>
                             <td class="text-center">{{getStatus(campaign)}}</td>
                             <td class="text-right">
-                                <btngroup-edit-delete-component v-if="checkStatusCampaign(campaign)" :main="editAction" v-bind:data="campaign" title="<?php echo esc_html($lang['globals']['edit']); ?>"></btngroup-edit-delete-component>
+                                <btngroup-edit-delete-component v-if="checkStatusCampaign(campaign)" :main="editAction" v-bind:data="campaign" title="<?php echo esc_html(__("Editar","envialosimple")); ?>"></btngroup-edit-delete-component>
                             </td>
                         </tr>
                     </tbody>
