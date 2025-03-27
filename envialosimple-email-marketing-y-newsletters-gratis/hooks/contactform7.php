@@ -3,13 +3,21 @@
     add_action('wpcf7_mail_sent', function ($cf7) {
         if(!empty($_REQUEST['_wpcf7'])) {
             $value = get_option('es_config_contactform7_active_'.sanitize_text_field($_REQUEST['_wpcf7']));
-            $values = json_decode($value);
+            if(empty($value)) {
+                return; 
+            }
 
+            $values = json_decode($value);
+            if($values === null) {
+                return; 
+            }
+            
             try {
-                if( property_exists($values,'mailList') 
-                    && !empty($values->mailList) 
-                    && property_exists($values,'associatedFields') 
-                    && !empty($values->associatedFields) 
+                if(is_object($values) && 
+                property_exists($values,'mailList') && 
+                !empty($values->mailList) && 
+                property_exists($values,'associatedFields') && 
+                !empty($values->associatedFields)
                 ) {
                     //set parameters
                     $fieldEmail = null;
@@ -24,11 +32,9 @@
                                 } else {
                                     $customFields[$field] = sanitize_text_field($_REQUEST[$key]);
                                 }
-                                
                             }
                         }
                     }
-
                     if(!empty($fieldEmail) && !empty($_REQUEST[$fieldEmail])) {
                         //create 
                         $dataNewContact = [
@@ -41,16 +47,15 @@
                         $dataNewContact['request'] = $_REQUEST;
 
                         sendEmailDobleOptIn($dataNewContact);
-                        
+
                     }
                 }
             } catch (\Throwable $th) {
                 die(print_r($th));
             }
-            
+
         }
     });
-
     
 
     function sendEmailDobleOptIn($data) {

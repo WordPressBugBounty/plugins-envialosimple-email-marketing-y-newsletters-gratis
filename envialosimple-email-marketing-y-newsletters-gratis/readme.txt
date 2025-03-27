@@ -3,10 +3,11 @@ Contributors: dattatec.com
 Tags: email,email marketing,newsletter,envialosimple,editor visual
 Requires at least: 5.9.3
 Tested up to: 6.7.2
-Stable tag: 2.4.3
+Stable tag: 2.4.4
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Language: es_AR
 
 El plugin de EnvíaloSimple te permitirá crear y enviar Newsletters de calidad profesional, en minutos y directamente desde tu Wordpress.
 
