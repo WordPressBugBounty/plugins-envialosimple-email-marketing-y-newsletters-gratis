@@ -37,8 +37,8 @@
                 <div class="btn-group " role="group" v-if="this.edit || this.delete">
                     <button type="button" v-on:click="toggle" class="btn btn-white dropdown-toggle"></button>
                     <div class="dropdown-menu"  v-bind:class="{ show: this.show}">
-                        <a v-if="this.edit" class="dropdown-item" v-on:click="editAction"><?php echo esc_html(__("Editar","envialosimple")); ?></a>
-                        <a v-if="this.delete" class="dropdown-item" v-on:click="deleteAction" ><?php echo esc_html(__("Eliminar","envialosimple")); ?></a>
+                        <a v-if="this.edit" class="dropdown-item" v-on:click="editAction"><?php echo esc_html(__("Editar","envialosimple-email-marketing-y-newsletters-gratis")); ?></a>
+                        <a v-if="this.delete" class="dropdown-item" v-on:click="deleteAction" ><?php echo esc_html(__("Eliminar","envialosimple-email-marketing-y-newsletters-gratis")); ?></a>
                     </div>
                 </div>
             </div>

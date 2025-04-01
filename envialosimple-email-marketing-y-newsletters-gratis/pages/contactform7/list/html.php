@@ -3,30 +3,30 @@
     <div id="contactFormLists">
         <example-form-7-component></example-form-7-component>
         <h1 class="clearfix">
-            <?php echo esc_html(__("Vinculación de formularios","envialosimple")); ?>
-            <a href="<?php menu_page_url('es-plugin-contactform7-create'); ?>" class="btn btn-primary fright"><?php echo esc_html(__("Vincular formularios","envialosimple")); ?></a>
+            <?php echo esc_html(__("Vinculación de formularios","envialosimple-email-marketing-y-newsletters-gratis")); ?>
+            <a href="<?php menu_page_url('es-plugin-contactform7-create'); ?>" class="btn btn-primary fright"><?php echo esc_html(__("Vincular formularios","envialosimple-email-marketing-y-newsletters-gratis")); ?></a>
         </h1>
         <div >
             <div class="row mb20 filterBlock">
                 <div class="col textFilter">
-                    <label class="mb3"><?php echo esc_html(__("Filtrar por nombre:","envialosimple")); ?></label>
+                    <label class="mb3"><?php echo esc_html(__("Filtrar por nombre:","envialosimple-email-marketing-y-newsletters-gratis")); ?></label>
                     <div class="inputFilter">
                         <input type="search" v-model="filter" @change="filterData" v-on:keyup.enter="filterData" class="form-control" placeholder=""/>
                     </div>
                 </div>
                 <div class="col-auto orderFilter">
-                    <label class="mb3"><?php echo esc_html(__("Ordenar por","envialosimple")); ?>:</label>
+                    <label class="mb3"><?php echo esc_html(__("Ordenar por","envialosimple-email-marketing-y-newsletters-gratis")); ?>:</label>
                     <div class="row">
                         <div class="col pr1">
                             <select class="form-control" v-model="orderby" @change="filterData">
-                                <option value="contactFormId"><?php echo esc_html(__("ID","envialosimple")); ?></option>
-                                <option value="contactFormName"><?php echo esc_html(__("Nombre","envialosimple")); ?></option>
+                                <option value="contactFormId"><?php echo esc_html(__("ID","envialosimple-email-marketing-y-newsletters-gratis")); ?></option>
+                                <option value="contactFormName"><?php echo esc_html(__("Nombre","envialosimple-email-marketing-y-newsletters-gratis")); ?></option>
                             </select>
                         </div>
                         <div class="col col-auto pl1">
                             <select class="form-control" v-model="order" @change="filterData">
-                                <option value="ASC"><?php echo esc_html(__("Asc","envialosimple")); ?></option>
-                                <option value="DESC"><?php echo esc_html(__("Desc","envialosimple")); ?></option>
+                                <option value="ASC"><?php echo esc_html(__("Asc","envialosimple-email-marketing-y-newsletters-gratis")); ?></option>
+                                <option value="DESC"><?php echo esc_html(__("Desc","envialosimple-email-marketing-y-newsletters-gratis")); ?></option>
                             </select>
                         </div>
                     </div>
@@ -37,10 +37,10 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col"><?php echo esc_html(__("ID","envialosimple")); ?></th>
-                            <th scope="col"><?php echo esc_html(__("Formulario Contact Form 7","envialosimple")); ?></th>
-                            <th scope="col" class="text-center"><?php echo esc_html(__("Lista EnvíaloSimple","envialosimple")); ?></th>
-                            <th scope="col" class="text-center w1p"><?php echo esc_html(__("Acciones","envialosimple")); ?></th>
+                            <th scope="col"><?php echo esc_html(__("ID","envialosimple-email-marketing-y-newsletters-gratis")); ?></th>
+                            <th scope="col"><?php echo esc_html(__("Formulario Contact Form 7","envialosimple-email-marketing-y-newsletters-gratis")); ?></th>
+                            <th scope="col" class="text-center"><?php echo esc_html(__("Lista EnvíaloSimple","envialosimple-email-marketing-y-newsletters-gratis")); ?></th>
+                            <th scope="col" class="text-center w1p"><?php echo esc_html(__("Acciones","envialosimple-email-marketing-y-newsletters-gratis")); ?></th>
                         </tr>
                     </thead>
                     <tbody>

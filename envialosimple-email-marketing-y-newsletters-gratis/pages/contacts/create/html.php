@@ -1,37 +1,37 @@
 <?php global $lang; 
 $months = array(
-    1 => __('Enero', 'envialosimple'),
-    2 => __('Febrero', 'envialosimple'),
-    3 => __('Marzo', 'envialosimple'),
-    4 => __('Abril', 'envialosimple'),
-    5 => __('Mayo', 'envialosimple'),
-    6 => __('Junio', 'envialosimple'),
-    7 => __('Julio', 'envialosimple'),
-    8 => __('Agosto', 'envialosimple'),
-    9 => __('Septiembre', 'envialosimple'),
-    10 => __('Octubre', 'envialosimple'),
-    11 => __('Noviembre', 'envialosimple'),
-    12 => __('Diciembre', 'envialosimple')
+    1 => __('Enero', "envialosimple-email-marketing-y-newsletters-gratis"),
+    2 => __('Febrero', "envialosimple-email-marketing-y-newsletters-gratis"),
+    3 => __('Marzo', "envialosimple-email-marketing-y-newsletters-gratis"),
+    4 => __('Abril', "envialosimple-email-marketing-y-newsletters-gratis"),
+    5 => __('Mayo', "envialosimple-email-marketing-y-newsletters-gratis"),
+    6 => __('Junio', "envialosimple-email-marketing-y-newsletters-gratis"),
+    7 => __('Julio', "envialosimple-email-marketing-y-newsletters-gratis"),
+    8 => __('Agosto', "envialosimple-email-marketing-y-newsletters-gratis"),
+    9 => __('Septiembre', "envialosimple-email-marketing-y-newsletters-gratis"),
+    10 => __('Octubre', "envialosimple-email-marketing-y-newsletters-gratis"),
+    11 => __('Noviembre', "envialosimple-email-marketing-y-newsletters-gratis"),
+    12 => __('Diciembre', "envialosimple-email-marketing-y-newsletters-gratis")
 );
 
 ?>
 <div class="wrap es-page" >
     <div id="contactsCreate">
         <div class="btnBackBlock">
-            <a href="<?php menu_page_url('es-plugin-contacts'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php echo esc_html(__("Volver","envialosimple")); ?></a>
+            <a href="<?php menu_page_url('es-plugin-contacts'); ?>" class="btn btn-link"><i class="fa fa-chevron-left" aria-hidden="true"></i> <?php echo esc_html(__("Volver","envialosimple-email-marketing-y-newsletters-gratis")); ?></a>
         </div>
-        <h1><?php echo esc_html(__("Crear contacto","envialosimple")); ?></h1>
+        <h1><?php echo esc_html(__("Crear contacto","envialosimple-email-marketing-y-newsletters-gratis")); ?></h1>
         <form @submit.prevent="submitForm">
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb20">
-                        <h6 class="mb20"><?php echo esc_html(__("Datos de contacto","envialosimple")); ?></h6>
+                        <h6 class="mb20"><?php echo esc_html(__("Datos de contacto","envialosimple-email-marketing-y-newsletters-gratis")); ?></h6>
                         <div class="form-group " >
-                            <label class="form-label"  for="email"><?php echo esc_html(__("Correo electrónico","envialosimple")); ?></label>
+                            <label class="form-label"  for="email"><?php echo esc_html(__("Correo electrónico","envialosimple-email-marketing-y-newsletters-gratis")); ?></label>
                             <input name="email" type="text" ref="emailBlock" id="email" class=" form-control" v-model="formData.email"  />
                         </div>
                         <div v-for="customfield in customfields" class="form-group ">
-                            <label class="form-label"  :for="'customFields'+customfield.id">{{customfield.name}} <span class="optional"><?php echo esc_html(__("(opcional)","envialosimple")); ?></span></label>
+                            <label class="form-label"  :for="'customFields'+customfield.id">{{customfield.name}} <span class="optional"><?php echo esc_html(__("(opcional)","envialosimple-email-marketing-y-newsletters-gratis")); ?></span></label>
                             <div v-if="customfield.type == 'Text field' || customfield.type == 'Hidden field'">
                                 <input  :ref="'customFieldsBlock'+customfield.id" type="text" :id="'customFieldsBlock'+customfield.id" class=" form-control"  v-model="customFieldsValues[customfield.id]" />
                             </div>
@@ -49,14 +49,14 @@ $months = array(
                             </div>
                             <div v-if="customfield.type == 'Drop list'" >
                                 <select class="form-control mw100i" :id="'customFieldsBlock'+customfield.id" v-model="customFieldsValues[customfield.id]" :ref="'customFieldsBlock'+customfield.id">
-                                    <option value=""><?php echo esc_html(__("Seleccione un valor","envialosimple")); ?></option>
+                                    <option value=""><?php echo esc_html(__("Seleccione un valor","envialosimple-email-marketing-y-newsletters-gratis")); ?></option>
                                     <option v-for="(value, index) in getValuesFields(customfield)" :value="value" >{{value}}</option>
                                 </select>
                             </div>
                             <div v-if="customfield.type == 'Anual Date'" >
                                 <div class="row fieldDate" :id="'customFieldsBlock'+customfield.id" :ref="'customFieldsBlock'+customfield.id">
                                     <div class="col-sm-6">
-                                        <label><?php echo esc_html(__("Mes","envialosimple")); ?></label>
+                                        <label><?php echo esc_html(__("Mes","envialosimple-email-marketing-y-newsletters-gratis")); ?></label>
                                         <select class="form-control mw100i"  v-model="customFieldsValues[customfield.id][0]" >
                                             <option value=""></option>
                                             <?php foreach($months as $num => $month): ?>
@@ -65,7 +65,7 @@ $months = array(
                                         </select>
                                     </div>
                                     <div class="col-sm-6">
-                                        <label><?php echo esc_html(__("Día","envialosimple")); ?></label>
+                                        <label><?php echo esc_html(__("Día","envialosimple-email-marketing-y-newsletters-gratis")); ?></label>
                                         <input class="form-control" maxlength="2" type="text" v-model="customFieldsValues[customfield.id][1]" v-on:keypress="isNumber($event)"/>
                                     </div>
                                 </div>
@@ -73,12 +73,12 @@ $months = array(
                         </div>
                     </div>
                     <div class="btnSubmit">
-                        <button type="submit" class="btn btn-primary"><?php echo esc_html(__("Crear contacto","envialosimple")); ?></button>
+                        <button type="submit" class="btn btn-primary"><?php echo esc_html(__("Crear contacto","envialosimple-email-marketing-y-newsletters-gratis")); ?></button>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb20">
-                        <h6 class="mb20"><?php echo esc_html(__("Lista para suscribir al contacto","envialosimple")); ?></h6>
+                        <h6 class="mb20"><?php echo esc_html(__("Lista para suscribir al contacto","envialosimple-email-marketing-y-newsletters-gratis")); ?></h6>
                         <singlelist-maillists-component
                             v-bind:options="maillists"
                             v-bind:selected="maillistSelected"

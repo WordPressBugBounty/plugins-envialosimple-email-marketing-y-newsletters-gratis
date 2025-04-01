@@ -93,14 +93,14 @@
                         ).then((response)=> {
                             //show msg
                             this.showSuccess = true;
-                            this.msgSuccess = '<?php echo esc_html(__("La vinculación fue exitosa.","envialosimple")); ?>';
+                            this.msgSuccess = '<?php echo esc_html(__("La vinculación fue exitosa.","envialosimple-email-marketing-y-newsletters-gratis")); ?>';
                         }).catch((error) => {
                             console.log('setConfig - error:',error);
                         }).then(() => {
                             this.loading = false;
                         });
                     } else {
-                        this.showMsgToast('<?php echo esc_html(__("Es necesario asociar el campo \"Email\" de \"Campo Personalizado EnvíaloSimple\" con algún campo de Contact Form 7 para poder continuar","envialosimple")); ?>');
+                        this.showMsgToast('<?php echo esc_html(__("Es necesario asociar el campo \"Email\" de \"Campo Personalizado EnvíaloSimple\" con algún campo de Contact Form 7 para poder continuar","envialosimple-email-marketing-y-newsletters-gratis")); ?>');
                     }
                 }
             },

@@ -48,7 +48,7 @@
                     let response = error.response;
                     if(response.status == '422') {
                         this.msgsService.showErrorsForm(response.data.code,this.$refs);
-                        this.showMsgToast('<?php echo esc_html(__("Para poder continuar, por favor revisa los campos con errores.","envialosimple")); ?>');
+                        this.showMsgToast('<?php echo esc_html(__("Para poder continuar, por favor revisa los campos con errores.","envialosimple-email-marketing-y-newsletters-gratis")); ?>');
                     } else {
                         this.showMsgToast(this.msgsService.getHtmlMgs(response.data.code));
                     }

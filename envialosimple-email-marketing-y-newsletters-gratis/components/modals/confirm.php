@@ -24,8 +24,8 @@
                         {{text}}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" v-if="this.accept" class="btn btn-sm btn-primary" v-on:click="acceptAction"><?php echo esc_html(__("Aceptar","envialosimple")); ?></button>
-                        <button type="button" v-if="this.cancel" class="btn btn-sm" v-on:click="cancelAction"><?php echo esc_html(__("Cancelar","envialosimple")); ?></button>
+                        <button type="button" v-if="this.accept" class="btn btn-sm btn-primary" v-on:click="acceptAction"><?php echo esc_html(__("Aceptar","envialosimple-email-marketing-y-newsletters-gratis")); ?></button>
+                        <button type="button" v-if="this.cancel" class="btn btn-sm" v-on:click="cancelAction"><?php echo esc_html(__("Cancelar","envialosimple-email-marketing-y-newsletters-gratis")); ?></button>
                     </div>
                 </div>
             </div>
