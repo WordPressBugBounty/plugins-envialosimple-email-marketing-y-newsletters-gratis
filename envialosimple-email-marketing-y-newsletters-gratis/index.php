@@ -9,7 +9,7 @@
         License: GPLv2 or later
         Language: es_AR
         Text Domain: envialosimple-email-marketing-y-newsletters-gratis
-        Domain Path: /lang
+        Domain Path: /languages
     */
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
@@ -25,7 +25,7 @@
     include_once(dirname(__FILE__).'/menu.php');
     
     function load_envialosimple_textdomain() {
-        load_plugin_textdomain( 'envialosimple-email-marketing-y-newsletters-gratis', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+        load_plugin_textdomain( 'envialosimple-email-marketing-y-newsletters-gratis', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
     }
     add_action( 'plugins_loaded', 'load_envialosimple_textdomain' );
 ?>
