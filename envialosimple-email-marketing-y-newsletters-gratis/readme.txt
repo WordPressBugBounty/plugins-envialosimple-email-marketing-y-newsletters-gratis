@@ -2,8 +2,8 @@
 Contributors: dattatec.com
 Tags: email,email marketing,newsletter,envialosimple,editor visual
 Requires at least: 5.9.3
-Tested up to: 6.7.2
-Stable tag: 2.4.5
+Tested up to: 7.0
+Stable tag: 2.4.6
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -59,6 +59,10 @@ A continuación se explican los pasos necesarios para la instalación del plugin
 6. Pantalla de Vinculación de Formularios con Contact Form 7
 
 == Changelog ==
+
+= 2.4.6 =
+
+* Se fortaleció la seguridad en las consultas a la base de datos del endpoint de Contact Form 7, implementando consultas preparadas y validación de parámetros para prevenir posibles vulnerabilidades de inyección SQL.
 
 = 2.4 =
 

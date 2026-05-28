@@ -111,39 +111,65 @@ function contactsform7_setconfig($req) {
 function contactsform7_getallconfigs($req) {
     global $wpdb;
     $data = $req->get_params();
-    
-    $filterName = (!empty($data['filter']))?"AND wp_posts.post_title LIKE '%".esc_sql($data['filter'])."%'":'';
-    $order = (!empty($data['order']))?esc_sql($data['order']):"DESC";
-    $orderBy = (!empty($data['orderby']))?"ORDER BY ".esc_sql($data['orderby'])." ".$order:"ORDER BY contactFormId ".esc_sql($order);
-    $page = (!empty($data['page']))?(esc_sql($data['page'])-1):"0";
-    $limit = (!empty($data['limit']))?esc_sql($data['limit']):"10";
 
-    $queryCount = "SELECT count(option_id) as count FROM wp_options WHERE wp_options.option_name LIKE 'es_config_contactform7_active_%' ";
+    $allowedOrderBy = array(
+        'contactFormId'   => "{$wpdb->posts}.ID",
+        'contactFormName' => "{$wpdb->posts}.post_title",
+    );
+    $orderByKey = (!empty($data['orderby']) && isset($allowedOrderBy[$data['orderby']]))
+        ? $data['orderby']
+        : 'contactFormId';
+    $orderByColumn = $allowedOrderBy[$orderByKey];
 
-    $query = "
-        SELECT wp_options.option_value,
-            wp_posts.ID as contactFormId,
-            wp_posts.post_title as contactFormName
-        FROM wp_options
-        INNER JOIN wp_posts 
-            ON (wp_posts.post_type = 'wpcf7_contact_form' 
-                AND wp_posts.ID = (SUBSTRING_INDEX(wp_options.option_name, 'es_config_contactform7_active_', -1))
-                ".$filterName."
+    $order = (!empty($data['order']) && strtoupper($data['order']) === 'ASC') ? 'ASC' : 'DESC';
+
+    $limit = (!empty($data['limit'])) ? max(1, intval($data['limit'])) : 10;
+    $page  = (!empty($data['page']))  ? max(1, intval($data['page'])) : 1;
+    $offset = ($page - 1) * $limit;
+
+    $optionLike = $wpdb->esc_like('es_config_contactform7_active_') . '%';
+
+    $filterSql = '';
+    $filterArgs = array();
+    if (!empty($data['filter'])) {
+        $filterSql = " AND {$wpdb->posts}.post_title LIKE %s ";
+        $filterArgs[] = '%' . $wpdb->esc_like($data['filter']) . '%';
+    }
+
+    $queryCount = $wpdb->prepare(
+        "SELECT count(option_id) as count
+         FROM {$wpdb->options}
+         WHERE {$wpdb->options}.option_name LIKE %s",
+        $optionLike
+    );
+
+    $querySql = "
+        SELECT {$wpdb->options}.option_value,
+            {$wpdb->posts}.ID as contactFormId,
+            {$wpdb->posts}.post_title as contactFormName
+        FROM {$wpdb->options}
+        INNER JOIN {$wpdb->posts}
+            ON ({$wpdb->posts}.post_type = 'wpcf7_contact_form'
+                AND {$wpdb->posts}.ID = (SUBSTRING_INDEX({$wpdb->options}.option_name, 'es_config_contactform7_active_', -1))
+                {$filterSql}
             )
-        WHERE wp_options.option_name LIKE 'es_config_contactform7_active_%'
-        ".$orderBy."
-        LIMIT ".$page.",".$limit."
+        WHERE {$wpdb->options}.option_name LIKE %s
+        ORDER BY {$orderByColumn} {$order}
+        LIMIT %d, %d
     ";
-    
+
+    $queryArgs = array_merge($filterArgs, array($optionLike, $offset, $limit));
+    $query = $wpdb->prepare($querySql, $queryArgs);
+
     $countForms = $wpdb->get_results($queryCount);
     $forms = array();
     $forms['count'] = $countForms[0]->count;
-    if($forms['count'] > 0) {
+    if ($forms['count'] > 0) {
         $forms['forms'] = $wpdb->get_results($query);
     } else {
         $forms['forms'] = null;
     }
-    
+
     return $forms;
 }
 

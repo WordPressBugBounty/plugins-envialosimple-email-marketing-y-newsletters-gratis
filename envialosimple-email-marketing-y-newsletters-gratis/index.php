@@ -3,7 +3,7 @@
         Plugin Name: EnvíaloSimple: Email Marketing y Newsletters
         Plugin URI: https://envialosimple.com/wordpress-newsletter-plugin
         Description: El plugin de EnvialoSimple te permitirá crear y enviar Newsletters de calidad profesional, en minutos y directamente desde tu Wordpress.
-        Version: 2.4.5
+        Version: 2.4.6
         Author: EnvialoSimple
         Author URI: https://envialosimple.com
         License: GPLv2 or later

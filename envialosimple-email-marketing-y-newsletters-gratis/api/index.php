@@ -1,6 +1,7 @@
 <?php
     //vars
-    $urlServerES = (getenv('URL_API'))?getenv('URL_API'):'https://api.esmsv.com';
+    //$urlServerES = (getenv('URL_API'))?getenv('URL_API'):'https://api.esmsv.com';
+    $urlServerES = 'https://api.esmsv.com';
     $apiKey = get_option('es_config_apikey');
 
     add_action('init','register_api_es');
