@@ -2,8 +2,8 @@
 Contributors: dattatec.com
 Tags: email,email marketing,newsletter,envialosimple,editor visual
 Requires at least: 5.9.3
-Tested up to: 7.0
-Stable tag: 2.4.6
+Tested up to: 7.1.2
+Stable tag: 2.4.7
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -59,6 +59,10 @@ A continuación se explican los pasos necesarios para la instalación del plugin
 6. Pantalla de Vinculación de Formularios con Contact Form 7
 
 == Changelog ==
+
+= 2.4.7 =
+
+* Se verificó la compatibilidad del plugin con WordPress 7.1.2.
 
 = 2.4.6 =
 
